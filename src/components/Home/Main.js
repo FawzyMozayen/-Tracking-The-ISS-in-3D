@@ -190,8 +190,6 @@ export default function Main() {
           style={{
             position: "absolute",
             top: "7vh",
-            position: "absolute",
-            top: 0,
             right: 0,
             zIndex: 1,
             marginRight: 15,
