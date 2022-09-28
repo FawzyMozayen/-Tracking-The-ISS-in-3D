@@ -9,7 +9,8 @@ import { useLoading } from "../../lib/loading";
 import useApi from "../../hooks/useApi";
 import issLocation from "../../api/iss-now";
 import calcPosFromLatLonRad from "../../utils/calcPosFromLatLong";
-import BG from "../../Images/background-1.jpeg";
+import BG from "../../Images/background-1.jpg";
+// import axios from "axios";
 
 export default function Main() {
   //Groups
@@ -37,7 +38,11 @@ export default function Main() {
     const { altitude, latitude, longitude, velocity } = issLocation.data;
 
     setIssInfo({ altitude, latitude, longitude, velocity });
-
+    // axios.get(`http://api.geonames.org/findNearbyStreetsJSON?lat=${latitude}&lng=${longitude}&username=demo`,
+    //   { headers: { 'Access-Control-Allow-Origin': '*' } }
+    // ).then((res) => {
+    //   console.log(res.data);
+    // });
     const pos = calcPosFromLatLonRad({
       lat: latitude,
       lon: longitude,
@@ -82,35 +87,20 @@ export default function Main() {
     currentRef.appendChild(renderer.domElement);
 
     //  skybox BG image
-    // // const loader = new THREE.TextureLoader();
-    // // const texture = loader.load(BG);
-    // // scene.background = texture;
+    // const loader = new THREE.TextureLoader();
+    // const texture = loader.load(BG);
+    // scene.background = texture;
 
-    /*
-  Dear team, 
-
-  this is a temp skybox that we can change later 
-  you may say that is looks cool 
-  but if you rotate the camera you will see that it is not a skybox
-  and someones signature is on the image
-
-  I will leave it here for now, but we should change it later
-
-  have a lovely day 
-
-  Ghannam
-  */
-
-    const loader = new THREE.TextureLoader();
-    const texture = loader.load(BG);
-    const skybox = new THREE.Mesh(
-      new THREE.SphereGeometry(80, 100, 100), // radius, widthSegments, heightSegments
-      new THREE.MeshBasicMaterial({
-        map: texture,
-        side: THREE.BackSide,
-      })
-    );
-    scene.add(skybox);
+    // const loader = new THREE.TextureLoader();
+    // const texture = loader.load(BG);
+    // const skybox = new THREE.Mesh(
+    //   new THREE.SphereGeometry(40, 1000, 1000), // radius, widthSegments, heightSegments
+    //   new THREE.MeshBasicMaterial({
+    //     map: texture,
+    //     side: THREE.BackSide,
+    //   })
+    // );
+    // scene.add(skybox);
 
     // get user location and set it to the state
 
@@ -143,7 +133,7 @@ export default function Main() {
     gltfLoader.setDRACOLoader(dracoLoader);
 
     // stars
-    const starGeometry = new THREE.SphereGeometry(0.1, 22, 22);
+    const starGeometry = new THREE.SphereGeometry(0.1, 12, 12);
     const starMaterial = new THREE.MeshStandardMaterial({ color: 0xffffff });
     for (let i = 0; i < 200; i++) {
       const star = new THREE.Mesh(starGeometry, starMaterial);
@@ -159,7 +149,7 @@ export default function Main() {
     gltfLoader.load(
       "./models/iss/issDraco.gltf",
       (gltf) => {
-        gltf.scene.scale.set(0.01, 0.01, 0.01);
+        gltf.scene.scale.set(0.015, 0.015, 0.015);
         iss.add(gltf.scene);
         scene.add(iss);
       },
