@@ -34,19 +34,20 @@ export default function NavBar() {
                         Home
                     </a>
                 </li>
+
+                <li>
+                    <a style={{
+                        color: 'white',
+                    }} href="/about">
+                        History
+                    </a>
+                </li>
                 <li>
                     <a style={{
                         color: 'white',
                     }}
                         href="/about">
                         About
-                    </a>
-                </li>
-                <li>
-                    <a style={{
-                        color: 'white',
-                    }} href="/about">
-                        Home
                     </a>
                 </li>
                 <li>
