@@ -139,13 +139,13 @@ export default function Main() {
       <div
         className="Contenedor3D"
         ref={mountRef}
-        style={{ width: '100%', height: '95vh' }}
+        style={{ width: '100%', height: '93vh' }}
       ></div>
       {!loading.loading && (
         <section
           style={{
             position: 'absolute',
-            top: 0,
+            top: "7vh",
             right: 0,
             zIndex: 1,
             marginRight: 15,
