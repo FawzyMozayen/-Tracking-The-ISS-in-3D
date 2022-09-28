@@ -113,9 +113,9 @@ export default function Main() {
     gltfLoader.setDRACOLoader(dracoLoader);
 
     // stars
-    const starGeometry = new THREE.SphereGeometry(0.1, 24, 24);
+    const starGeometry = new THREE.SphereGeometry(0.1, 22, 22);
     const starMaterial = new THREE.MeshStandardMaterial({ color: 0xffffff });
-    for (let i = 0; i < 300; i++) {
+    for (let i = 0; i < 200; i++) {
       const star = new THREE.Mesh(starGeometry, starMaterial);
       const [x, y, z] = Array(3)
         .fill()
@@ -197,30 +197,42 @@ export default function Main() {
             padding: "1em",
             width: 148,
             color: "#000",
-            background: "rgba(255, 255, 255, 0.7)",
+            background: "rgba(255, 255, 255, 0.6)",
             borderRadius: ".5em",
             fontSize: 12,
             lineHeight: 1.2,
           }}
         >
-          <p>
+          <p style={{
+            color: "white"
+          }}>
             <strong>Current Location:</strong>
           </p>
-          <span>{`${issInfo.latitude.toFixed(4)}, ${issInfo.longitude.toFixed(
+          <span style={{
+            color: "white"
+          }}>{`${issInfo.latitude.toFixed(4)}, ${issInfo.longitude.toFixed(
             4
           )}`}</span>
           <br />
           <br />
-          <p>
+          <p style={{
+            color: "white"
+          }}>
             <strong>Current Altitude:</strong>
           </p>
-          <span>{`${issInfo.altitude.toFixed(4)} Km`}</span>
+          <span style={{
+            color: "white"
+          }}>{`${issInfo.altitude.toFixed(4)} Km`}</span>
           <br />
           <br />
-          <p>
+          <p style={{
+            color: "white"
+          }}>
             <strong>Current Velocity:</strong>
           </p>
-          <span>{`${issInfo.velocity.toFixed(4)} Km/h`}</span>
+          <span style={{
+            color: "white"
+          }}>{`${issInfo.velocity.toFixed(4)} Km/h`}</span>
         </section>
       )}
     </>
