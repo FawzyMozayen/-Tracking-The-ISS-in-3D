@@ -108,6 +108,7 @@ export default function Main() {
     const dracoLoader = new DRACOLoader();
     dracoLoader.setDecoderPath("./draco/");
 
+
     //GLTF Loader
     const gltfLoader = new GLTFLoader();
     gltfLoader.setDRACOLoader(dracoLoader);
@@ -125,6 +126,9 @@ export default function Main() {
     }
 
     //ISS Model
+
+
+
     gltfLoader.load(
       "./models/iss/issDraco.gltf",
       (gltf) => {
