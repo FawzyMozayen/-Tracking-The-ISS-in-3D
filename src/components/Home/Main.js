@@ -16,6 +16,11 @@ export default function Main() {
   const iss = new THREE.Group();
   const earth = new THREE.Group();
 
+  const [userLocation, setUserLocation] = useState({
+    lat: 0,
+    lon: 0,
+  });
+
   const mountRef = useRef(null);
   const loading = useLoading();
 
@@ -40,6 +45,24 @@ export default function Main() {
     });
 
     iss.position.set(pos.x, pos.y, pos.z);
+  };
+
+  const distanceInMeters = (lat1, lon1, lat2, lon2) => {
+    // lat1 and lon2 are the user location and lat1 and lon2 are the iss location
+    // generally used geo measurement function
+    const R = 6371e3; // metres
+    const φ1 = (lat1 * Math.PI) / 180; // φ, λ in radians
+    const φ2 = (lat2 * Math.PI) / 180;
+    const Δφ = ((lat2 - lat1) * Math.PI) / 180;
+    const Δλ = ((lon2 - lon1) * Math.PI) / 180;
+
+    const a =
+      Math.sin(Δφ / 2) * Math.sin(Δφ / 2) +
+      Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) * Math.sin(Δλ / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+    const d = R * c; // in metres
+    return d; // d is the distance between the user and the iss in meters
   };
 
   useEffect(() => {
@@ -89,6 +112,13 @@ export default function Main() {
     );
     scene.add(skybox);
 
+    // get user location and set it to the state
+
+    navigator.geolocation.getCurrentPosition((position) => {
+      const { latitude, longitude } = position.coords;
+      setUserLocation({ lat: latitude, lon: longitude });
+    });
+
     //Interval update position
     const interval = setInterval(() => getIssLocation(), 5000);
 
@@ -108,7 +138,6 @@ export default function Main() {
     const dracoLoader = new DRACOLoader();
     dracoLoader.setDecoderPath("./draco/");
 
-
     //GLTF Loader
     const gltfLoader = new GLTFLoader();
     gltfLoader.setDRACOLoader(dracoLoader);
@@ -126,8 +155,6 @@ export default function Main() {
     }
 
     //ISS Model
-
-
 
     gltfLoader.load(
       "./models/iss/issDraco.gltf",
@@ -207,36 +234,98 @@ export default function Main() {
             lineHeight: 1.2,
           }}
         >
-          <p style={{
-            color: "white"
-          }}>
+          <p
+            style={{
+              color: "white",
+            }}
+          >
             <strong>Current Location:</strong>
           </p>
-          <span style={{
-            color: "white"
-          }}>{`${issInfo.latitude.toFixed(4)}, ${issInfo.longitude.toFixed(
+          <span
+            style={{
+              color: "white",
+            }}
+          >{`${issInfo.latitude.toFixed(4)}, ${issInfo.longitude.toFixed(
             4
           )}`}</span>
           <br />
           <br />
-          <p style={{
-            color: "white"
-          }}>
+          <p
+            style={{
+              color: "white",
+            }}
+          >
             <strong>Current Altitude:</strong>
           </p>
-          <span style={{
-            color: "white"
-          }}>{`${issInfo.altitude.toFixed(4)} Km`}</span>
+          <span
+            style={{
+              color: "white",
+            }}
+          >{`${issInfo.altitude.toFixed(4)} Km`}</span>
           <br />
           <br />
-          <p style={{
-            color: "white"
-          }}>
+          <p
+            style={{
+              color: "white",
+            }}
+          >
             <strong>Current Velocity:</strong>
           </p>
-          <span style={{
-            color: "white"
-          }}>{`${issInfo.velocity.toFixed(4)} Km/h`}</span>
+          <span
+            style={{
+              color: "white",
+            }}
+          >{`${issInfo.velocity.toFixed(4)} Km/h`}</span>
+          <br />
+          <br />
+          <p
+            style={{
+              color: "white",
+            }}
+          >
+            <strong>Distance from you:</strong>
+          </p>
+          <span
+            style={{
+              color: "white",
+            }}
+          >{`${
+            distanceInMeters(
+              userLocation.lat,
+              userLocation.lon,
+              issInfo.latitude,
+              issInfo.longitude
+            ).toFixed(4) / 1000
+          } Km`}</span>
+          <br />
+          <br />
+          <span
+            style={{
+              color: "white",
+            }}
+          >{`${
+            distanceInMeters(
+              userLocation.lat,
+              userLocation.lon,
+              issInfo.latitude,
+              issInfo.longitude
+            ).toFixed(4) / 1609.34
+          } Miles`}</span>
+          <br />
+          <br />
+          <span
+            style={{
+              color: "white",
+            }}
+          >{`${
+            distanceInMeters(
+              userLocation.lat,
+              userLocation.lon,
+              issInfo.latitude,
+              issInfo.longitude
+            ).toFixed(4) * 3.28084
+            // to convert meters to feet divide by 0.3048 (1 meter = 3.28084 feet)
+          } feet`}</span>
         </section>
       )}
     </>
