@@ -3,8 +3,8 @@ import React from 'react';
 export default function NavBar() {
     return (
         <div style={{
-            height: '7vh',
-            backgroundColor: "black",
+            height: "4%",
+            backgroundColor: "#04061c",
             display: 'flex',
             justifyContent: 'space-between',
             flexDirection: 'row',
@@ -50,13 +50,13 @@ export default function NavBar() {
                         About
                     </a>
                 </li>
-                <li>
+                {/* <li>
                     <a style={{
                         color: 'white',
                     }} href="/about">
                         Home
                     </a>
-                </li>
+                </li> */}
             </ul>
         </div>
     );
