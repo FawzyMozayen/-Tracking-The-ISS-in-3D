@@ -1,4 +1,4 @@
-import { Main, Loading, Annotation } from './components';
+import { Main, Loading, } from './components';
 import { useLoading } from './lib/loading';
 import {
   Routes,
