@@ -84,7 +84,7 @@ export default function Main() {
     gltfLoader.load(
       './models/iss/issDraco.gltf',
       (gltf) => {
-        gltf.scene.scale.set(0.02, 0.02, 0.02);
+        gltf.scene.scale.set(0.01, 0.01, 0.01);
         iss.add(gltf.scene);
         scene.add(iss);
       },
