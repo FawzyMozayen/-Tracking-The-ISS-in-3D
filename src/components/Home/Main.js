@@ -12,7 +12,7 @@ import calcPosFromLatLonRad from "../../utils/calcPosFromLatLong";
 import moon from "../../Images/moon.jpeg";
 import NavBar from "../NavBar/NavBar";
 import Credit from "../Credit/Credit";
-import clouds from "../../Images/cloud.jpeg";
+import clouds from "../../Images/earthCloud.png";
 // import axios from "axios";
 
 export default function Main() {
@@ -140,7 +140,7 @@ export default function Main() {
 
     //ISS Model
     gltfLoader.load(
-      "./models/iss/issDraco.gltf",
+      "./models/iss/ISS_2016.gltf",
       (gltf) => {
         gltf.scene.scale.set(0.015, 0.015, 0.015);
         iss.add(gltf.scene);
@@ -180,11 +180,25 @@ export default function Main() {
       new THREE.SphereGeometry(0.022, 32, 32),
       new THREE.MeshPhongMaterial({
         transparent: true,
-        opacity: 0.08,
+        opacity: 0.03,
       })
     );
     atmosphere.scale.set(40, 40, 40);
     earth.add(atmosphere);
+
+    //Add Clouds 
+    const cloudTexture = new THREE.TextureLoader().load(clouds);
+    const cloudMaterial = new THREE.MeshPhongMaterial({
+      map: cloudTexture,
+      transparent: true,
+      opacity: 0.9,
+    });
+    const cloudGeometry = new THREE.SphereGeometry(0.022, 32, 32);
+    const cloudMesh = new THREE.Mesh(cloudGeometry, cloudMaterial);
+    cloudMesh.scale.set(40, 40, 40);
+    earth.add(cloudMesh);
+
+
 
 
     //Light
