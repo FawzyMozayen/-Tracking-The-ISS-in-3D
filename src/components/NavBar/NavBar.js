@@ -40,7 +40,7 @@ export default function NavBar() {
                 <li>
                     <a style={{
                         color: 'white',
-                    }} href="/about">
+                    }} href="/history">
                         History
                     </a>
                 </li>
