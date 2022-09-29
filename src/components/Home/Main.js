@@ -70,6 +70,7 @@ export default function Main() {
   useEffect(() => {
     //Get the iss location when the page loads
     getIssLocation();
+
     //Data from the canvas
     const currentRef = mountRef.current;
     const { clientWidth: width, clientHeight: height } = currentRef;
@@ -188,14 +189,14 @@ export default function Main() {
       new THREE.SphereGeometry(0.022, 32, 32),
       new THREE.MeshPhongMaterial({
         transparent: true,
-        opacity: 0.1,
+        opacity: 0.08,
       })
     );
     atmosphere.scale.set(40, 40, 40);
     earth.add(atmosphere);
 
     //Light
-    const ambientLight = new THREE.AmbientLight(0xffffff, 2.5);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 2);
     scene.add(ambientLight);
 
     const pointLight = new THREE.PointLight(0xffffff, 1);
@@ -218,7 +219,7 @@ export default function Main() {
   }, []);
 
   return (
-    <>
+    <div>
       <NavBar />
       <div
         className="Contenedor3D"
@@ -335,6 +336,6 @@ export default function Main() {
         </section>
       )}
       <Credit />
-    </>
+    </div>
   );
 }
