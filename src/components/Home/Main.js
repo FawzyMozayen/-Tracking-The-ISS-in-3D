@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import "./Main.css";
 import { useRef, useEffect, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
-
 import { useLoading } from "../../lib/loading";
 import useApi from "../../hooks/useApi";
 import issLocation from "../../api/iss-now";
@@ -233,7 +233,7 @@ export default function Main() {
   }, []);
 
   return (
-    <div>
+    <div className="Main">
       <NavBar />
       <div
         className="Contenedor3D"
@@ -247,11 +247,9 @@ export default function Main() {
         <section
           style={{
             position: "absolute",
-            top: "7vh",
-            right: 0,
+            top: "10vh",
+            right: 10,
             zIndex: 1,
-            marginRight: 15,
-            marginTop: 15,
             padding: "1em",
             width: 200,
             color: "#000",
@@ -324,7 +322,6 @@ export default function Main() {
           ).toFixed(4) / 1000
             } Km`}</span>
           <br />
-          <br />
           <span
             style={{
               color: "white",
@@ -336,7 +333,6 @@ export default function Main() {
             issInfo.longitude
           ).toFixed(4) / 1609.34
             } Miles`}</span>
-          <br />
           <br />
           <span
             style={{

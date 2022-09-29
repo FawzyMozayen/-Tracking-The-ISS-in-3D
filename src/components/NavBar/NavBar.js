@@ -13,8 +13,10 @@ export default function NavBar() {
         }}>
             <h1 style={{
                 color: 'white',
-                marginLeft: '2em',
+                marginLeft: '1em',
                 cursor: 'pointer',
+                fontWeight: "bolder",
+                fontFamily: "Pacifico"
             }}
                 onClick={() => window.location.href = '/'}
             >
@@ -26,12 +28,13 @@ export default function NavBar() {
                 flexDirection: 'row',
                 justifyContent: 'space-between',
                 width: 200,
-                marginRight: '4em',
+                marginRight: '2em',
                 marginTop: "0.5em",
             }}>
                 <li>
                     <a style={{
                         color: 'white',
+                        fontWeight: "bolder"
                     }}
                         href="/"
                     >
@@ -42,6 +45,7 @@ export default function NavBar() {
                 <li>
                     <a style={{
                         color: 'white',
+                        fontWeight: "bolder"
                     }} href="/history">
                         History
                     </a>
@@ -49,6 +53,7 @@ export default function NavBar() {
                 <li>
                     <a style={{
                         color: 'white',
+                        fontWeight: "bolder"
                     }}
                         href="/about">
                         About
