@@ -141,7 +141,7 @@ export default function Main() {
     gltfLoader.setDRACOLoader(dracoLoader);
 
     // stars
-    const starGeometry = new THREE.SphereGeometry(0.1, 6, 6);
+    const starGeometry = new THREE.SphereGeometry(0.05, 0.5, 0.5);
     const starMaterial = new THREE.MeshStandardMaterial({ color: 0xffffff });
     for (let i = 0; i < 200; i++) {
       const star = new THREE.Mesh(starGeometry, starMaterial);

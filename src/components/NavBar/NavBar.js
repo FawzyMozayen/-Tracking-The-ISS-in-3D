@@ -14,6 +14,7 @@ export default function NavBar() {
             <h1 style={{
                 color: 'white',
                 marginLeft: '2em',
+                cursor: 'pointer',
             }}
                 onClick={() => window.location.href = '/'}
             >
