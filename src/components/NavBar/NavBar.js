@@ -17,7 +17,7 @@ export default function NavBar() {
             }}
                 onClick={() => window.location.href = '/'}
             >
-                Dreem
+                ISS Tracker
             </h1>
             <ul style={{
                 listStyle: 'none',

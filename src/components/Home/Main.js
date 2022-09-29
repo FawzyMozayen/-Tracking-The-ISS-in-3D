@@ -13,6 +13,7 @@ import BG from "../../Images/background-1.jpg";
 import moon from "../../Images/moon.jpeg";
 import clouds from "../../Images/cloud.jpeg";
 import NavBar from "../NavBar/NavBar";
+import Credit from "../Credit/Credit";
 // import axios from "axios";
 
 export default function Main() {
@@ -237,7 +238,7 @@ export default function Main() {
             width: 200,
             color: "#000",
             background: "rgba(255, 255, 255, 0.3)",
-            borderRadius: ".5em",
+            borderRadius: ".8em",
             fontSize: 12,
             lineHeight: 1.2,
           }}
@@ -333,6 +334,7 @@ export default function Main() {
             } feet`}</span>
         </section>
       )}
+      <Credit />
     </>
   );
 }
