@@ -86,6 +86,13 @@ export default function Main() {
     renderer.setSize(width, height);
     currentRef.appendChild(renderer.domElement);
 
+    //Please dont touch the code below
+    // const controls = new OrbitControls(camera, renderer.domElement);
+    // controls.noPan = true;
+    // controls.noZoom = true;
+    // controls.enableDamping = true;
+    // controls.dampingFactor = 0.01;
+
     //  skybox BG image
     // const loader = new THREE.TextureLoader();
     // const texture = loader.load(BG);
@@ -185,6 +192,13 @@ export default function Main() {
       }
     );
 
+    //disbale scroll threejs
+    const disableScroll = () => {
+      window.scrollTo(0, 0);
+    };
+    window.addEventListener("scroll", disableScroll);
+
+
     const atmosphere = new THREE.Mesh(
       new THREE.SphereGeometry(0.022, 32, 32),
       new THREE.MeshPhongMaterial({
@@ -224,7 +238,10 @@ export default function Main() {
       <div
         className="Contenedor3D"
         ref={mountRef}
-        style={{ width: "100%", height: "100vh" }}
+        style={{
+          width: '100%',
+          height: '100vh',
+        }}
       ></div>
       {!loading.loading && (
         <section
