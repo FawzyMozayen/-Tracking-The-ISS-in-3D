@@ -8,7 +8,7 @@ export default function NavBar() {
             display: 'flex',
             justifyContent: 'space-between',
             flexDirection: 'row',
-            paddingBlock: '1.5vh',
+            paddingBlock: '0.5vh',
         }}>
             <h1 style={{
                 color: 'white',
