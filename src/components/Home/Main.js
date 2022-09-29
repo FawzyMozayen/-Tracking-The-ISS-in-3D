@@ -11,6 +11,7 @@ import issLocation from "../../api/iss-now";
 import calcPosFromLatLonRad from "../../utils/calcPosFromLatLong";
 import BG from "../../Images/background-1.jpg";
 import moon from "../../Images/moon.jpeg";
+import clouds from "../../Images/cloud.jpeg";
 // import axios from "axios";
 
 export default function Main() {
@@ -108,7 +109,7 @@ export default function Main() {
     const moonMaterial = new THREE.MeshPhongMaterial({ map: moonTexture });
     const moonGeometry = new THREE.SphereGeometry(0.2, 32, 32);
     const moonMesh = new THREE.Mesh(moonGeometry, moonMaterial);
-    moonMesh.position.set(6, 6, 6);
+    moonMesh.position.set(4, 4, 4);
     // moonMesh.rotation.y = 10;
     // moonMesh.rotation.x = 10;
     // moonMesh.rotation.z = 10;
@@ -185,6 +186,16 @@ export default function Main() {
         loading.navigate(false);
       }
     );
+
+    const atmosphere = new THREE.Mesh(
+      new THREE.SphereGeometry(0.022, 32, 32),
+      new THREE.MeshPhongMaterial({
+        transparent: true,
+        opacity: 0,
+      })
+    );
+    atmosphere.scale.set(40, 40, 40);
+    earth.add(atmosphere);
 
     //Light
     const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
@@ -289,40 +300,43 @@ export default function Main() {
             style={{
               color: "white",
             }}
-          >{`${distanceInMeters(
-            userLocation.lat,
-            userLocation.lon,
-            issInfo.latitude,
-            issInfo.longitude
-          ).toFixed(4) / 1000
-            } Km`}</span>
+          >{`${
+            distanceInMeters(
+              userLocation.lat,
+              userLocation.lon,
+              issInfo.latitude,
+              issInfo.longitude
+            ).toFixed(4) / 1000
+          } Km`}</span>
           <br />
           <br />
           <span
             style={{
               color: "white",
             }}
-          >{`${distanceInMeters(
-            userLocation.lat,
-            userLocation.lon,
-            issInfo.latitude,
-            issInfo.longitude
-          ).toFixed(4) / 1609.34
-            } Miles`}</span>
+          >{`${
+            distanceInMeters(
+              userLocation.lat,
+              userLocation.lon,
+              issInfo.latitude,
+              issInfo.longitude
+            ).toFixed(4) / 1609.34
+          } Miles`}</span>
           <br />
           <br />
           <span
             style={{
               color: "white",
             }}
-          >{`${distanceInMeters(
-            userLocation.lat,
-            userLocation.lon,
-            issInfo.latitude,
-            issInfo.longitude
-          ).toFixed(4) * 3.28084
+          >{`${
+            distanceInMeters(
+              userLocation.lat,
+              userLocation.lon,
+              issInfo.latitude,
+              issInfo.longitude
+            ).toFixed(4) * 3.28084
             // to convert meters to feet divide by 0.3048 (1 meter = 3.28084 feet)
-            } feet`}</span>
+          } feet`}</span>
         </section>
       )}
     </>
