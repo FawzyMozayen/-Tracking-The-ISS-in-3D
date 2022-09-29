@@ -152,9 +152,9 @@ export default function Main() {
 
     //Earth Model
     gltfLoader.load(
-      "./models/earth/earthDraco.gltf",
+      "./models/earth/Earth.gltf",
       (gltf) => {
-        gltf.scene.scale.set(0.02, 0.02, 0.02);
+        gltf.scene.scale.set(0.0033, 0.0033, 0.0033);
         gltf.scene.rotateY(-4.7);
         earth.add(gltf.scene);
         scene.add(earth);
