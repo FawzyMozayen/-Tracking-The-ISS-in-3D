@@ -108,7 +108,7 @@ export default function Main() {
     const moonMaterial = new THREE.MeshPhongMaterial({ map: moonTexture });
     const moonGeometry = new THREE.SphereGeometry(0.2, 32, 32);
     const moonMesh = new THREE.Mesh(moonGeometry, moonMaterial);
-    moonMesh.position.set(1.5, 1.5, 1.5);
+    moonMesh.position.set(6, 6, 6);
     // moonMesh.rotation.y = 10;
     // moonMesh.rotation.x = 10;
     // moonMesh.rotation.z = 10;
@@ -143,7 +143,7 @@ export default function Main() {
     gltfLoader.setDRACOLoader(dracoLoader);
 
     // stars
-    const starGeometry = new THREE.SphereGeometry(0.1, 12, 12);
+    const starGeometry = new THREE.SphereGeometry(0.1, 6, 6);
     const starMaterial = new THREE.MeshStandardMaterial({ color: 0xffffff });
     for (let i = 0; i < 200; i++) {
       const star = new THREE.Mesh(starGeometry, starMaterial);
@@ -187,7 +187,7 @@ export default function Main() {
     );
 
     //Light
-    const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
     scene.add(ambientLight);
 
     const pointLight = new THREE.PointLight(0xffffff, 1);
