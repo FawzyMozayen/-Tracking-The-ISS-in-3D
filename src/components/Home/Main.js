@@ -12,6 +12,7 @@ import calcPosFromLatLonRad from "../../utils/calcPosFromLatLong";
 import moon from "../../Images/moon.jpeg";
 import NavBar from "../NavBar/NavBar";
 import Credit from "../Credit/Credit";
+import clouds from "../../Images/cloud.jpeg";
 // import axios from "axios";
 
 export default function Main() {
@@ -184,6 +185,7 @@ export default function Main() {
     );
     atmosphere.scale.set(40, 40, 40);
     earth.add(atmosphere);
+
 
     //Light
     const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
