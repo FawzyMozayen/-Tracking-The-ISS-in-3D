@@ -73,6 +73,7 @@ export default function Main() {
 
   useEffect(() => {
     //Data from the canvas
+    getIssLocation();
     const currentRef = mountRef.current;
     const { clientWidth: width, clientHeight: height } = currentRef;
 
