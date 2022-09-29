@@ -10,6 +10,7 @@ import useApi from "../../hooks/useApi";
 import issLocation from "../../api/iss-now";
 import calcPosFromLatLonRad from "../../utils/calcPosFromLatLong";
 import BG from "../../Images/background-1.jpg";
+import moon from "../../Images/moon.jpeg";
 // import axios from "axios";
 
 export default function Main() {
@@ -102,7 +103,16 @@ export default function Main() {
     // );
     // scene.add(skybox);
 
-    // get user location and set it to the state
+    // moon
+    const moonTexture = new THREE.TextureLoader().load(moon);
+    const moonMaterial = new THREE.MeshPhongMaterial({ map: moonTexture });
+    const moonGeometry = new THREE.SphereGeometry(0.2, 32, 32);
+    const moonMesh = new THREE.Mesh(moonGeometry, moonMaterial);
+    moonMesh.position.set(1.5, 1.5, 1.5);
+    // moonMesh.rotation.y = 10;
+    // moonMesh.rotation.x = 10;
+    // moonMesh.rotation.z = 10;
+    scene.add(moonMesh);
 
     navigator.geolocation.getCurrentPosition((position) => {
       const { latitude, longitude } = position.coords;
