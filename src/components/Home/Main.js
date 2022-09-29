@@ -12,6 +12,7 @@ import calcPosFromLatLonRad from "../../utils/calcPosFromLatLong";
 import BG from "../../Images/background-1.jpg";
 import moon from "../../Images/moon.jpeg";
 import clouds from "../../Images/cloud.jpeg";
+import NavBar from "../NavBar/NavBar";
 // import axios from "axios";
 
 export default function Main() {
@@ -217,10 +218,11 @@ export default function Main() {
 
   return (
     <>
+      <NavBar />
       <div
         className="Contenedor3D"
         ref={mountRef}
-        style={{ width: "100%", height: "93vh" }}
+        style={{ width: "100%", height: "100vh" }}
       ></div>
       {!loading.loading && (
         <section

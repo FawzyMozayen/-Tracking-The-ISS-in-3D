@@ -3,12 +3,13 @@ import React from 'react';
 export default function NavBar() {
     return (
         <div style={{
-            height: "7vh",
-            backgroundColor: "#04061c",
+            position: "absolute",
+            backgroundColor: "transparent",
             display: 'flex',
             justifyContent: 'space-between',
             flexDirection: 'row',
-            paddingBlock: '0.5vh',
+            paddingBlock: '1%',
+            width: '100%',
         }}>
             <h1 style={{
                 color: 'white',

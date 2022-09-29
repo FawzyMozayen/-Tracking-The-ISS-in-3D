@@ -4,7 +4,6 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import NavBar from './components/NavBar/NavBar';
 import About from './components/About/About';
 import History from './components/History/History';
 
@@ -13,7 +12,6 @@ function App() {
 
   return (
     <>
-      <NavBar />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />
