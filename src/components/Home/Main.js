@@ -140,7 +140,7 @@ export default function Main() {
 
     //ISS Model
     gltfLoader.load(
-      "./models/iss/issDraco.gltf",
+      "./models/iss/ISS.gltf",
       (gltf) => {
         gltf.scene.scale.set(0.015, 0.015, 0.015);
         iss.add(gltf.scene);
