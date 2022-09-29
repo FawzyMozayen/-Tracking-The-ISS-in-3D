@@ -23,7 +23,7 @@ export default function NavBar() {
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'space-between',
-                width: '12vw',
+                width: 200,
                 marginRight: '4em',
                 marginTop: "0.5em",
             }}>
