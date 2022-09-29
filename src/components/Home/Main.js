@@ -216,7 +216,7 @@ export default function Main() {
             marginRight: 15,
             marginTop: 15,
             padding: "1em",
-            width: 148,
+            width: 200,
             color: "#000",
             background: "rgba(255, 255, 255, 0.6)",
             borderRadius: ".5em",
@@ -279,43 +279,40 @@ export default function Main() {
             style={{
               color: "white",
             }}
-          >{`${
-            distanceInMeters(
-              userLocation.lat,
-              userLocation.lon,
-              issInfo.latitude,
-              issInfo.longitude
-            ).toFixed(4) / 1000
-          } Km`}</span>
+          >{`${distanceInMeters(
+            userLocation.lat,
+            userLocation.lon,
+            issInfo.latitude,
+            issInfo.longitude
+          ).toFixed(4) / 1000
+            } Km`}</span>
           <br />
           <br />
           <span
             style={{
               color: "white",
             }}
-          >{`${
-            distanceInMeters(
-              userLocation.lat,
-              userLocation.lon,
-              issInfo.latitude,
-              issInfo.longitude
-            ).toFixed(4) / 1609.34
-          } Miles`}</span>
+          >{`${distanceInMeters(
+            userLocation.lat,
+            userLocation.lon,
+            issInfo.latitude,
+            issInfo.longitude
+          ).toFixed(4) / 1609.34
+            } Miles`}</span>
           <br />
           <br />
           <span
             style={{
               color: "white",
             }}
-          >{`${
-            distanceInMeters(
-              userLocation.lat,
-              userLocation.lon,
-              issInfo.latitude,
-              issInfo.longitude
-            ).toFixed(4) * 3.28084
+          >{`${distanceInMeters(
+            userLocation.lat,
+            userLocation.lon,
+            issInfo.latitude,
+            issInfo.longitude
+          ).toFixed(4) * 3.28084
             // to convert meters to feet divide by 0.3048 (1 meter = 3.28084 feet)
-          } feet`}</span>
+            } feet`}</span>
         </section>
       )}
     </>

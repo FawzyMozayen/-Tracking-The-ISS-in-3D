@@ -29,9 +29,9 @@ const Loading = ({ visible = false }) => {
         flexDirection: 'column',
       }}
     >
-      <Lottie options={defaultOptions} height={200} width={200} />
+      <Lottie options={defaultOptions} height={300} width={300} />
       <h4 style={{ color: 'white', textAlign: 'center' }}>
-        We are loading the information,
+        the app is loading...,
         <br />
         this may take a few seconds, please wait...
       </h4>
