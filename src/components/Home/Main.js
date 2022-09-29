@@ -218,7 +218,9 @@ export default function Main() {
   }, []);
 
   return (
-    <>
+    <div style={{
+      overflow: "hidden",
+    }}>
       <NavBar />
       <div
         className="Contenedor3D"
@@ -335,6 +337,6 @@ export default function Main() {
         </section>
       )}
       <Credit />
-    </>
+    </div>
   );
 }
