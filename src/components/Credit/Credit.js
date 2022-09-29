@@ -20,6 +20,7 @@ const Credit = () => {
     >
       <h4 style={{
         color: "white",
+        fontWeight: "bolder",
       }}>By Dreem</h4>
     </div>
   );

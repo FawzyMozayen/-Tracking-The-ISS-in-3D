@@ -9,9 +9,7 @@ import { useLoading } from "../../lib/loading";
 import useApi from "../../hooks/useApi";
 import issLocation from "../../api/iss-now";
 import calcPosFromLatLonRad from "../../utils/calcPosFromLatLong";
-import BG from "../../Images/background-1.jpg";
 import moon from "../../Images/moon.jpeg";
-import clouds from "../../Images/cloud.jpeg";
 import NavBar from "../NavBar/NavBar";
 import Credit from "../Credit/Credit";
 // import axios from "axios";
@@ -82,32 +80,13 @@ export default function Main() {
     camera.position.set(3, 3, 3);
     camera.lookAt(new THREE.Vector3());
 
+    //TODO: Check this again and fix it if it's not working
+    camera.lookAt(iss.position);
+
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(width, height);
     currentRef.appendChild(renderer.domElement);
 
-    //Please dont touch the code below
-    // const controls = new OrbitControls(camera, renderer.domElement);
-    // controls.noPan = true;
-    // controls.noZoom = true;
-    // controls.enableDamping = true;
-    // controls.dampingFactor = 0.01;
-
-    //  skybox BG image
-    // const loader = new THREE.TextureLoader();
-    // const texture = loader.load(BG);
-    // scene.background = texture;
-
-    // const loader = new THREE.TextureLoader();
-    // const texture = loader.load(BG);
-    // const skybox = new THREE.Mesh(
-    //   new THREE.SphereGeometry(40, 1000, 1000), // radius, widthSegments, heightSegments
-    //   new THREE.MeshBasicMaterial({
-    //     map: texture,
-    //     side: THREE.BackSide,
-    //   })
-    // );
-    // scene.add(skybox);
 
     // moon
     const moonTexture = new THREE.TextureLoader().load(moon);
@@ -115,9 +94,6 @@ export default function Main() {
     const moonGeometry = new THREE.SphereGeometry(0.2, 32, 32);
     const moonMesh = new THREE.Mesh(moonGeometry, moonMaterial);
     moonMesh.position.set(4, 4, 4);
-    // moonMesh.rotation.y = 10;
-    // moonMesh.rotation.x = 10;
-    // moonMesh.rotation.z = 10;
     scene.add(moonMesh);
 
     navigator.geolocation.getCurrentPosition((position) => {
@@ -126,7 +102,7 @@ export default function Main() {
     });
 
     //Interval update position
-    const interval = setInterval(() => getIssLocation(), 5000);
+    const interval = setInterval(() => getIssLocation(), 2000);
 
     //OrbitControls
     const orbitControls = new OrbitControls(camera, renderer.domElement);
@@ -148,20 +124,20 @@ export default function Main() {
     const gltfLoader = new GLTFLoader();
     gltfLoader.setDRACOLoader(dracoLoader);
 
-    // stars
+
+    //Stars
     const starGeometry = new THREE.SphereGeometry(0.05, 0.5, 0.5);
     const starMaterial = new THREE.MeshStandardMaterial({ color: 0xffffff });
-    for (let i = 0; i < 200; i++) {
+    for (let i = 0; i < 300; i++) {
       const star = new THREE.Mesh(starGeometry, starMaterial);
       const [x, y, z] = Array(3)
         .fill()
-        .map(() => THREE.MathUtils.randFloatSpread(100));
+        .map(() => THREE.MathUtils.randFloatSpread(130));
       star.position.set(x, y, z);
       scene.add(star);
     }
 
     //ISS Model
-
     gltfLoader.load(
       "./models/iss/issDraco.gltf",
       (gltf) => {
@@ -210,7 +186,7 @@ export default function Main() {
     earth.add(atmosphere);
 
     //Light
-    const ambientLight = new THREE.AmbientLight(0xffffff, 2);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
     scene.add(ambientLight);
 
     const pointLight = new THREE.PointLight(0xffffff, 1);
