@@ -228,7 +228,7 @@ export default function Main() {
             padding: "1em",
             width: 200,
             color: "#000",
-            background: "rgba(255, 255, 255, 0.6)",
+            background: "rgba(255, 255, 255, 0.3)",
             borderRadius: ".5em",
             fontSize: 12,
             lineHeight: 1.2,
@@ -283,7 +283,7 @@ export default function Main() {
               color: "white",
             }}
           >
-            <strong>Distance from you:</strong>
+            <strong>Distance away from you:</strong>
           </p>
           <span
             style={{
