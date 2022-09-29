@@ -13,7 +13,9 @@ export default function NavBar() {
             <h1 style={{
                 color: 'white',
                 marginLeft: '2em',
-            }}>
+            }}
+                onClick={() => window.location.href = '/'}
+            >
                 Dreem
             </h1>
             <ul style={{
@@ -50,13 +52,7 @@ export default function NavBar() {
                         About
                     </a>
                 </li>
-                {/* <li>
-                    <a style={{
-                        color: 'white',
-                    }} href="/about">
-                        Home
-                    </a>
-                </li> */}
+
             </ul>
         </div>
     );
