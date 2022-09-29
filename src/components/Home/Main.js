@@ -13,6 +13,7 @@ import moon from "../../Images/moon.jpeg";
 import NavBar from "../NavBar/NavBar";
 import Credit from "../Credit/Credit";
 import clouds from "../../Images/earthCloud.png";
+import Galaxy from "../../Images/galaxy.png";
 // import axios from "axios";
 
 export default function Main() {
@@ -81,13 +82,21 @@ export default function Main() {
     camera.position.set(3, 3, 3);
     camera.lookAt(new THREE.Vector3());
 
-    //TODO: Check this again and fix it if it's not working
-    camera.lookAt(iss.position);
-
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(width, height);
     currentRef.appendChild(renderer.domElement);
 
+
+    const loader = new THREE.TextureLoader();
+    const texture = loader.load(Galaxy);
+    const skybox = new THREE.Mesh(
+      new THREE.SphereGeometry(10, 10, 10), // radius, widthSegments, heightSegments
+      new THREE.MeshBasicMaterial({
+        map: texture,
+        side: THREE.BackSide,
+      })
+    );
+    scene.add(skybox);
 
     // moon
     const moonTexture = new THREE.TextureLoader().load(moon);
@@ -140,9 +149,9 @@ export default function Main() {
 
     //ISS Model
     gltfLoader.load(
-      "./models/iss/ISS_2016.gltf",
+      "./models/iss/issDraco.gltf",
       (gltf) => {
-        gltf.scene.scale.set(0.015, 0.015, 0.015);
+        gltf.scene.scale.set(0.014, 0.014, 0.014);
         iss.add(gltf.scene);
         scene.add(iss);
       },
@@ -180,7 +189,7 @@ export default function Main() {
       new THREE.SphereGeometry(0.022, 32, 32),
       new THREE.MeshPhongMaterial({
         transparent: true,
-        opacity: 0.03,
+        opacity: 0.02,
       })
     );
     atmosphere.scale.set(40, 40, 40);
@@ -191,7 +200,7 @@ export default function Main() {
     const cloudMaterial = new THREE.MeshPhongMaterial({
       map: cloudTexture,
       transparent: true,
-      opacity: 0.9,
+      opacity: 0.8,
     });
     const cloudGeometry = new THREE.SphereGeometry(0.022, 32, 32);
     const cloudMesh = new THREE.Mesh(cloudGeometry, cloudMaterial);
