@@ -9,12 +9,16 @@ import { useLoading } from "../../lib/loading";
 import useApi from "../../hooks/useApi";
 import issLocation from "../../api/iss-now";
 import calcPosFromLatLonRad from "../../utils/calcPosFromLatLong";
+
+//Textures
 import moon from "../../Images/moon.jpeg";
-import NavBar from "../NavBar/NavBar";
-import Credit from "../Credit/Credit";
 import clouds from "../../Images/earthCloud.png";
 import Galaxy from "../../Images/galaxy.png";
-// import axios from "axios";
+
+//Components
+import NavBar from "../NavBar/NavBar";
+import Credit from "../Credit/Credit";
+import HowTo from "../HowTo/HowToSpot";
 
 export default function Main() {
   //Groups
@@ -39,7 +43,7 @@ export default function Main() {
 
   const getIssLocation = async () => {
     const issLocation = await getIssLocationNow.request();
-    const { altitude, latitude, longitude, velocity } = issLocation.data;
+    const { altitude, latitude, longitude, velocity } = issLocation?.data;
     setIssInfo({ altitude, latitude, longitude, velocity });
     const pos = calcPosFromLatLonRad({
       lat: latitude,
@@ -79,13 +83,12 @@ export default function Main() {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(25, width / height, 0.1, 100);
     scene.add(camera);
-    camera.position.set(3, 3, 3);
+    camera.position.set(3, 3, 4);
     camera.lookAt(new THREE.Vector3());
 
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(width, height);
     currentRef.appendChild(renderer.domElement);
-
 
     const loader = new THREE.TextureLoader();
     const texture = loader.load(Galaxy);
@@ -133,7 +136,6 @@ export default function Main() {
     //GLTF Loader
     const gltfLoader = new GLTFLoader();
     gltfLoader.setDRACOLoader(dracoLoader);
-
 
     //Stars
     const starGeometry = new THREE.SphereGeometry(0.05, 0.5, 0.5);
@@ -184,7 +186,6 @@ export default function Main() {
     };
     window.addEventListener("scroll", disableScroll);
 
-
     const atmosphere = new THREE.Mesh(
       new THREE.SphereGeometry(0.022, 32, 32),
       new THREE.MeshPhongMaterial({
@@ -195,7 +196,7 @@ export default function Main() {
     atmosphere.scale.set(40, 40, 40);
     earth.add(atmosphere);
 
-    //Add Clouds 
+    //Add Clouds
     const cloudTexture = new THREE.TextureLoader().load(clouds);
     const cloudMaterial = new THREE.MeshPhongMaterial({
       map: cloudTexture,
@@ -206,9 +207,6 @@ export default function Main() {
     const cloudMesh = new THREE.Mesh(cloudGeometry, cloudMaterial);
     cloudMesh.scale.set(40, 40, 40);
     earth.add(cloudMesh);
-
-
-
 
     //Light
     const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
@@ -240,8 +238,8 @@ export default function Main() {
         className="Contenedor3D"
         ref={mountRef}
         style={{
-          width: '100%',
-          height: '100vh',
+          width: "100%",
+          height: "100vh",
         }}
       ></div>
       {!loading.loading && (
@@ -249,7 +247,7 @@ export default function Main() {
           style={{
             position: "absolute",
             top: "10vh",
-            right: 10,
+            right: 30,
             zIndex: 1,
             padding: "1em",
             width: 200,
@@ -258,6 +256,7 @@ export default function Main() {
             borderRadius: ".8em",
             fontSize: 12,
             lineHeight: 1.2,
+            userSelect: "none",
           }}
         >
           <p
@@ -315,41 +314,45 @@ export default function Main() {
             style={{
               color: "white",
             }}
-          >{`${distanceInMeters(
-            userLocation.lat,
-            userLocation.lon,
-            issInfo.latitude,
-            issInfo.longitude
-          ).toFixed(4) / 1000
-            } Km`}</span>
+          >{`${
+            distanceInMeters(
+              userLocation.lat,
+              userLocation.lon,
+              issInfo.latitude,
+              issInfo.longitude
+            ).toFixed(4) / 1000
+          } Km`}</span>
           <br />
           <span
             style={{
               color: "white",
             }}
-          >{`${distanceInMeters(
-            userLocation.lat,
-            userLocation.lon,
-            issInfo.latitude,
-            issInfo.longitude
-          ).toFixed(4) / 1609.34
-            } Miles`}</span>
+          >{`${
+            distanceInMeters(
+              userLocation.lat,
+              userLocation.lon,
+              issInfo.latitude,
+              issInfo.longitude
+            ).toFixed(4) / 1609.34
+          } Miles`}</span>
           <br />
           <span
             style={{
               color: "white",
             }}
-          >{`${distanceInMeters(
-            userLocation.lat,
-            userLocation.lon,
-            issInfo.latitude,
-            issInfo.longitude
-          ).toFixed(4) * 3.28084
+          >{`${
+            distanceInMeters(
+              userLocation.lat,
+              userLocation.lon,
+              issInfo.latitude,
+              issInfo.longitude
+            ).toFixed(4) * 3.28084
             // to convert meters to feet divide by 0.3048 (1 meter = 3.28084 feet)
-            } feet`}</span>
+          } feet`}</span>
         </section>
       )}
       <Credit />
+      <HowTo />
     </div>
   );
 }
