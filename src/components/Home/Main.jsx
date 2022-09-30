@@ -142,18 +142,6 @@ export default function Main() {
     const gltfLoader = new GLTFLoader();
     gltfLoader.setDRACOLoader(dracoLoader);
 
-    //Stars
-    // const starGeometry = new THREE.SphereGeometry(0.05, 0.5, 0.5);
-    // const starMaterial = new THREE.MeshStandardMaterial({ color: 0xffffff });
-    // for (let i = 0; i < 300; i++) {
-    //   const star = new THREE.Mesh(starGeometry, starMaterial);
-    //   const [x, y, z] = Array(3)
-    //     .fill()
-    //     .map(() => THREE.MathUtils.randFloatSpread(130));
-    //   star.position.set(x, y, z);
-    //   scene.add(star);
-    // }
-
     //ISS Model
     gltfLoader.load(
       "./models/iss/issDraco.gltf",
@@ -185,12 +173,6 @@ export default function Main() {
       }
     );
 
-    //disbale scroll threejs
-    const disableScroll = () => {
-      window.scrollTo(0, 0);
-    };
-    window.addEventListener("scroll", disableScroll);
-
     const atmosphere = new THREE.Mesh(
       new THREE.SphereGeometry(0.022, 32, 32),
       new THREE.MeshPhongMaterial({
@@ -201,7 +183,7 @@ export default function Main() {
     atmosphere.scale.set(40, 40, 40);
     earth.add(atmosphere);
 
-    //Add Clouds
+    //Clouds
     const cloudTexture = new THREE.TextureLoader().load(clouds);
     const cloudMaterial = new THREE.MeshPhongMaterial({
       map: cloudTexture,
