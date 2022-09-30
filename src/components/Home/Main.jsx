@@ -360,7 +360,7 @@ export default function Main() {
           <div
             style={{
               position: "absolute",
-              top: "33vh",
+              bottom: "2%",
               right: 30,
               zIndex: 1,
               padding: "1em",
@@ -372,7 +372,7 @@ export default function Main() {
               lineHeight: 1.2,
               userSelect: "none",
             }}
-            onClick={() => (window.location.href = "/about")}
+            onClick={() => (window.location.href = "/how-to-spot-the-iss")}
           >
             <h4
               style={{
@@ -383,9 +383,9 @@ export default function Main() {
               How do I Spot The Station?
             </h4>
           </div>
+          <Credit />
         </>
       )}
-      <Credit />
     </div>
   );
 }
