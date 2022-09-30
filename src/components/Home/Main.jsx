@@ -89,6 +89,12 @@ export default function Main() {
     renderer.setSize(width, height);
     currentRef.appendChild(renderer.domElement);
 
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.minDistance = 2.5;
+    controls.maxDistance = 20;
+    //Chnage the scroll speed
+    controls.zoomSpeed = 0.5;
+
     const loader = new THREE.TextureLoader();
     const texture = loader.load(Galaxy);
     const skybox = new THREE.Mesh(
@@ -137,16 +143,16 @@ export default function Main() {
     gltfLoader.setDRACOLoader(dracoLoader);
 
     //Stars
-    const starGeometry = new THREE.SphereGeometry(0.05, 0.5, 0.5);
-    const starMaterial = new THREE.MeshStandardMaterial({ color: 0xffffff });
-    for (let i = 0; i < 300; i++) {
-      const star = new THREE.Mesh(starGeometry, starMaterial);
-      const [x, y, z] = Array(3)
-        .fill()
-        .map(() => THREE.MathUtils.randFloatSpread(130));
-      star.position.set(x, y, z);
-      scene.add(star);
-    }
+    // const starGeometry = new THREE.SphereGeometry(0.05, 0.5, 0.5);
+    // const starMaterial = new THREE.MeshStandardMaterial({ color: 0xffffff });
+    // for (let i = 0; i < 300; i++) {
+    //   const star = new THREE.Mesh(starGeometry, starMaterial);
+    //   const [x, y, z] = Array(3)
+    //     .fill()
+    //     .map(() => THREE.MathUtils.randFloatSpread(130));
+    //   star.position.set(x, y, z);
+    //   scene.add(star);
+    // }
 
     //ISS Model
     gltfLoader.load(
