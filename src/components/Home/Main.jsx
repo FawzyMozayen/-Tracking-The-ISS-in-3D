@@ -18,7 +18,6 @@ import Galaxy from "../../Images/galaxy.png";
 //Components
 import NavBar from "../NavBar/NavBar";
 import Credit from "../Credit/Credit";
-import HowTo from "../HowTo/HowToSpot";
 
 export default function Main() {
   //Groups

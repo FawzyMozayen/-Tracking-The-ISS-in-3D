@@ -1,0 +1,28 @@
+.history{
+    position: absolute;
+    color: #fff;
+    top: 20%;
+    padding: 5%;
+}
+.bigTitle{
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+.smallTitle{
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+.historyText{
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+.text{
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+}
+.Section{
+    margin-bottom: 10em;
+}
