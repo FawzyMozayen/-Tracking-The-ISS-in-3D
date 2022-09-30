@@ -243,116 +243,144 @@ export default function Main() {
         }}
       ></div>
       {!loading.loading && (
-        <section
-          style={{
-            position: "absolute",
-            top: "10vh",
-            right: 30,
-            zIndex: 1,
-            padding: "1em",
-            width: 200,
-            color: "#000",
-            background: "rgba(255, 255, 255, 0.3)",
-            borderRadius: ".8em",
-            fontSize: 12,
-            lineHeight: 1.2,
-            userSelect: "none",
-          }}
-        >
-          <p
+        <>
+          <section
             style={{
-              color: "white",
+              position: "absolute",
+              top: "10vh",
+              right: 30,
+              zIndex: 1,
+              padding: "1em",
+              width: 200,
+              color: "#000",
+              background: "rgba(255, 255, 255, 0.3)",
+              borderRadius: ".8em",
+              fontSize: 12,
+              lineHeight: 1.2,
+              userSelect: "none",
             }}
           >
-            <strong>Current Location:</strong>
-          </p>
-          <span
+            <p
+              style={{
+                color: "white",
+              }}
+            >
+              <strong>Current Location:</strong>
+            </p>
+            <span
+              style={{
+                color: "white",
+              }}
+            >{`${issInfo.latitude.toFixed(4)}, ${issInfo.longitude.toFixed(
+              4
+            )}`}</span>
+            <br />
+            <br />
+            <p
+              style={{
+                color: "white",
+              }}
+            >
+              <strong>Current Altitude:</strong>
+            </p>
+            <span
+              style={{
+                color: "white",
+              }}
+            >{`${issInfo.altitude.toFixed(4)} Km`}</span>
+            <br />
+            <br />
+            <p
+              style={{
+                color: "white",
+              }}
+            >
+              <strong>Current Velocity:</strong>
+            </p>
+            <span
+              style={{
+                color: "white",
+              }}
+            >{`${issInfo.velocity.toFixed(4)} Km/h`}</span>
+            <br />
+            <br />
+            <p
+              style={{
+                color: "white",
+              }}
+            >
+              <strong>Distance away from you:</strong>
+            </p>
+            <span
+              style={{
+                color: "white",
+              }}
+            >{`${
+              distanceInMeters(
+                userLocation.lat,
+                userLocation.lon,
+                issInfo.latitude,
+                issInfo.longitude
+              ).toFixed(4) / 1000
+            } Km`}</span>
+            <br />
+            <span
+              style={{
+                color: "white",
+              }}
+            >{`${
+              distanceInMeters(
+                userLocation.lat,
+                userLocation.lon,
+                issInfo.latitude,
+                issInfo.longitude
+              ).toFixed(4) / 1609.34
+            } Miles`}</span>
+            <br />
+            <span
+              style={{
+                color: "white",
+              }}
+            >{`${
+              distanceInMeters(
+                userLocation.lat,
+                userLocation.lon,
+                issInfo.latitude,
+                issInfo.longitude
+              ).toFixed(4) * 3.28084
+              // to convert meters to feet divide by 0.3048 (1 meter = 3.28084 feet)
+            } feet`}</span>
+          </section>
+
+          <div
             style={{
-              color: "white",
+              position: "absolute",
+              top: "33vh",
+              right: 30,
+              zIndex: 1,
+              padding: "1em",
+              width: 200,
+              color: "#000",
+              background: "rgba(255, 255, 255, 0.3)",
+              borderRadius: ".8em",
+              fontSize: 12,
+              lineHeight: 1.2,
+              userSelect: "none",
             }}
-          >{`${issInfo.latitude.toFixed(4)}, ${issInfo.longitude.toFixed(
-            4
-          )}`}</span>
-          <br />
-          <br />
-          <p
-            style={{
-              color: "white",
-            }}
+            onClick={() => (window.location.href = "/about")}
           >
-            <strong>Current Altitude:</strong>
-          </p>
-          <span
-            style={{
-              color: "white",
-            }}
-          >{`${issInfo.altitude.toFixed(4)} Km`}</span>
-          <br />
-          <br />
-          <p
-            style={{
-              color: "white",
-            }}
-          >
-            <strong>Current Velocity:</strong>
-          </p>
-          <span
-            style={{
-              color: "white",
-            }}
-          >{`${issInfo.velocity.toFixed(4)} Km/h`}</span>
-          <br />
-          <br />
-          <p
-            style={{
-              color: "white",
-            }}
-          >
-            <strong>Distance away from you:</strong>
-          </p>
-          <span
-            style={{
-              color: "white",
-            }}
-          >{`${
-            distanceInMeters(
-              userLocation.lat,
-              userLocation.lon,
-              issInfo.latitude,
-              issInfo.longitude
-            ).toFixed(4) / 1000
-          } Km`}</span>
-          <br />
-          <span
-            style={{
-              color: "white",
-            }}
-          >{`${
-            distanceInMeters(
-              userLocation.lat,
-              userLocation.lon,
-              issInfo.latitude,
-              issInfo.longitude
-            ).toFixed(4) / 1609.34
-          } Miles`}</span>
-          <br />
-          <span
-            style={{
-              color: "white",
-            }}
-          >{`${
-            distanceInMeters(
-              userLocation.lat,
-              userLocation.lon,
-              issInfo.latitude,
-              issInfo.longitude
-            ).toFixed(4) * 3.28084
-            // to convert meters to feet divide by 0.3048 (1 meter = 3.28084 feet)
-          } feet`}</span>
-        </section>
+            <h4
+              style={{
+                color: "white",
+                textDecoration: "underline",
+              }}
+            >
+              How do I Spot The Station?
+            </h4>
+          </div>
+        </>
       )}
       <Credit />
-      <HowTo />
     </div>
   );
 }
