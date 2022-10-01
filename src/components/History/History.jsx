@@ -50,9 +50,6 @@ export default function History() {
   }, []);
 
   return (
-    // class name bigTitle is for the title of the page that are bold and bigger than the rest of the text
-    // class name smallTitle is for the title of the page that are bold and smaller than the rest of the text
-    // class name text is for the text that are not bold and smaller than the rest of the text
     <div>
       <NavBar />
       <div className="history">
