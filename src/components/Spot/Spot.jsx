@@ -58,7 +58,10 @@ export default function History() {
     // class name text is for the text that are not bold and smaller than the rest of the text
     <div>
       <NavBar />
-      <div className="Spot">
+      <div style={{position: "absolute",
+        color: "#fff",
+        top: "20%",
+        padding: "5%",}}>
         <h1
           style={{
             color: "white",
