@@ -52,7 +52,7 @@ export default function History() {
   return (
     <div>
       <NavBar />
-      <div className="history">
+      {/* <div className="history">
         <h1
           style={{
             color: "white",
@@ -191,7 +191,7 @@ export default function History() {
             environment of the ISS.
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
