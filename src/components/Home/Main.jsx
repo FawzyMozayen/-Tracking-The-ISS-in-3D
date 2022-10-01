@@ -114,7 +114,7 @@ export default function Main() {
     const moonMaterial = new THREE.MeshPhongMaterial({ map: moonTexture });
     const moonGeometry = new THREE.SphereGeometry(0.2, 32, 32);
     const moonMesh = new THREE.Mesh(moonGeometry, moonMaterial);
-    moonMesh.position.set(4, 4, 4);
+    moonMesh.position.set(1, 1, 1);
     scene.add(moonMesh);
 
     navigator.geolocation.getCurrentPosition((position) => {
@@ -356,6 +356,7 @@ export default function Main() {
               fontSize: 12,
               lineHeight: 1.2,
               userSelect: "none",
+              cursor: "pointer",
             }}
             onClick={() => {
               setShowSpot(!showSpot);
