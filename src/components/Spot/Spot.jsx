@@ -10,16 +10,13 @@ export default function Spot() {
         top: "20%",
         bottom: "20%",
         zIndex: 1,
-        marginLeft: 15,
-        marginTop: 15,
-        padding: "1em",
+        padding: "2em",
         width: "50%",
         color: "#000",
         background: "rgba(255, 255, 255, 0.7)",
         borderRadius: ".8em",
         fontSize: 12,
         lineHeight: 1.2,
-        cursor: "pointer",
       }}
     >
       <div>

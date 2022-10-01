@@ -356,6 +356,7 @@ export default function Main() {
               fontSize: 12,
               lineHeight: 1.2,
               userSelect: "none",
+              cursor: "pointer",
             }}
             onClick={() => {
               setShowSpot(!showSpot);
