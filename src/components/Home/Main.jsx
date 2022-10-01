@@ -122,7 +122,7 @@ export default function Main() {
     });
 
     //Interval update position
-    const interval = setInterval(() => getIssLocation(), 5000);
+    const interval = setInterval(() => getIssLocation(), 2000);
 
     //OrbitControls
     const orbitControls = new OrbitControls(camera, renderer.domElement);
@@ -148,7 +148,7 @@ export default function Main() {
     gltfLoader.load(
       "./models/iss/issDraco.gltf",
       (gltf) => {
-        gltf.scene.scale.set(0.014, 0.014, 0.014);
+        gltf.scene.scale.set(0.01, 0.01, 0.014);
         iss.add(gltf.scene);
         scene.add(iss);
       },
