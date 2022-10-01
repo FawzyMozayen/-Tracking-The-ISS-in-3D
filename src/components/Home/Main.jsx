@@ -95,7 +95,6 @@ export default function Main() {
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.minDistance = 2.5;
     controls.maxDistance = 20;
-    //Chnage the scroll speed
     controls.zoomSpeed = 0.5;
 
     const loader = new THREE.TextureLoader();
@@ -114,7 +113,7 @@ export default function Main() {
     const moonMaterial = new THREE.MeshPhongMaterial({ map: moonTexture });
     const moonGeometry = new THREE.SphereGeometry(0.2, 32, 32);
     const moonMesh = new THREE.Mesh(moonGeometry, moonMaterial);
-    moonMesh.position.set(4, 4, 4);
+    moonMesh.position.set(3.5, 3.5, 3.5);
     scene.add(moonMesh);
 
     navigator.geolocation.getCurrentPosition((position) => {
