@@ -11,7 +11,6 @@ import issLocation from "../../api/iss-now";
 import calcPosFromLatLonRad from "../../utils/calcPosFromLatLong";
 
 //Textures
-import moon from "../../Images/moon.jpeg";
 import clouds from "../../Images/earthCloud.png";
 import Galaxy from "../../Images/galaxy.png";
 
@@ -26,18 +25,11 @@ export default function Main() {
   const mountRef = useRef(null);
   const loading = useLoading();
 
-  const [issInfo, setIssInfo] = useState({
-    latitude: 0.0,
-    longitude: 0.0,
-    altitude: 0.0,
-    velocity: 0.0,
-  });
   const getIssLocationNow = useApi(issLocation.getIssLocationNow);
 
   const getIssLocation = async () => {
     const issLocation = await getIssLocationNow.request();
-    const { altitude, latitude, longitude, velocity } = issLocation?.data;
-    setIssInfo({ altitude, latitude, longitude, velocity });
+    const { latitude, longitude } = issLocation?.data;
     const pos = calcPosFromLatLonRad({
       lat: latitude,
       lon: longitude,
@@ -50,6 +42,11 @@ export default function Main() {
     //Get the iss location when the page loads
     getIssLocation();
 
+    const interval = setInterval(() => {
+      getIssLocation();
+      followIss();
+    }, 2000);
+
     //Data from the canvas
     const currentRef = mountRef.current;
     const { clientWidth: width, clientHeight: height } = currentRef;
@@ -58,15 +55,22 @@ export default function Main() {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(25, width / height, 0.1, 100);
     scene.add(camera);
-    camera.position.set(3, 3, 4);
-    camera.lookAt(new THREE.Vector3());
+    // camera.position.set(3, 3, 4);
+    // camera.lookAt(new THREE.Vector3());
+
+    const followIss = () => {
+      camera.position.set(
+        iss.position.x + 2,
+        iss.position.y + 2,
+        iss.position.z + 5
+      );
+      camera.lookAt(iss.position);
+    };
+    followIss();
 
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(width, height);
     currentRef.appendChild(renderer.domElement);
-
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.enabled = false;
 
     const loader = new THREE.TextureLoader();
     const texture = loader.load(Galaxy);
@@ -79,20 +83,15 @@ export default function Main() {
     );
     scene.add(skybox);
 
-    // moon
-    const moonTexture = new THREE.TextureLoader().load(moon);
-    const moonMaterial = new THREE.MeshPhongMaterial({ map: moonTexture });
-    const moonGeometry = new THREE.SphereGeometry(0.2, 32, 32);
-    const moonMesh = new THREE.Mesh(moonGeometry, moonMaterial);
-    moonMesh.position.set(4, 4, 4);
-    scene.add(moonMesh);
-
     //Interval update position
-    const interval = setInterval(() => getIssLocation(), 2000);
 
     //OrbitControls
     const orbitControls = new OrbitControls(camera, renderer.domElement);
-    orbitControls.enableDamping = true;
+    orbitControls.enableDamping = false;
+    orbitControls.enabled = false;
+    orbitControls.enablePan = false;
+    orbitControls.enableZoom = false;
+    orbitControls.enableRotate = false;
 
     //Resize canvas
     const resize = () => {

@@ -29,7 +29,7 @@ const Loading = ({ visible = false }) => {
         flexDirection: "column",
       }}
     >
-      <Lottie options={defaultOptions} height={300} width={300} ariaLabel />
+      <Lottie options={defaultOptions} height={300} width={300} />
       <h4 style={{ color: "white", textAlign: "center" }}>
         The app is loading...,
         <br />
