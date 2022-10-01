@@ -31,7 +31,7 @@ export default function NavBar(props) {
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
-          width: props.about ? "15%" : "10%",
+          width: "15%",
           marginRight: "2em",
           marginTop: "0.5em",
         }}
@@ -59,19 +59,17 @@ export default function NavBar(props) {
             History
           </a>
         </li>
-        {props.about && (
-          <li>
-            <a
-              style={{
-                color: "white",
-                fontWeight: "bolder",
-              }}
-              href="/about"
-            >
-              About
-            </a>
-          </li>
-        )}
+        <li>
+          <a
+            style={{
+              color: "white",
+              fontWeight: "bolder",
+            }}
+            href="/about"
+          >
+            About
+          </a>
+        </li>
       </ul>
     </div>
   );

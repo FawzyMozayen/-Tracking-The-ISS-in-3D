@@ -31,7 +31,7 @@ const Loading = ({ visible = false }) => {
     >
       <Lottie options={defaultOptions} height={300} width={300} />
       <h4 style={{ color: "white", textAlign: "center" }}>
-        The app is loading...,
+        The app is loading...
         <br />
         this may take a few seconds, please wait...
       </h4>

@@ -57,7 +57,6 @@ export default function History() {
   return (
     <div>
       <NavBar />
-
       <div
         style={{
           position: "absolute",

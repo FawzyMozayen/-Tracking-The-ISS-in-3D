@@ -222,7 +222,7 @@ export default function Main() {
 
   return (
     <div className="Main">
-      <NavBar about={true} />
+      <NavBar />
       <div
         className="Contenedor3D"
         ref={mountRef}
