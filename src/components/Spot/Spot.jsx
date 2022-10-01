@@ -14,7 +14,7 @@ export default function Spot() {
         marginTop: 15,
         padding: "2em",
         width: "60%",
-        height: "80%",
+        height: "83%",
         color: "#000",
         background: "rgba(255, 255, 255, 0.7)",
         borderRadius: ".8em",
@@ -63,12 +63,12 @@ export default function Spot() {
         </div>
         <div>
           <h3 style={{ marginBottom: "1%" }}>Disappears</h3>
-          <p style={{ marginBottom: "2%" }}>
+          <p style={{ marginBottom: "3%" }}>
             It shows where the International Space Station will disappear from
             view in the night sky.
           </p>
         </div>
-        {/* <img src="../../Images/astro_horizon.png" /> */}
+        {/* <img src="../../Images/astro_horizon.png" />
         <div>
           <p style={{ marginBottom: "2%" }}>
             Important: The International Space Station orbits with an
@@ -81,7 +81,7 @@ export default function Spot() {
             opportunities pages will give you a list of all possible space
             station sightings for your location.
           </p>
-        </div>
+        </div> */}
         <div>
           <p style={{ marginBottom: "2%" }}>
             The space station looks like an airplane or a very bright star
