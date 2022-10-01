@@ -97,6 +97,7 @@ export default function Main() {
     controls.maxDistance = 20;
     controls.zoomSpeed = 0.5;
 
+    //Texture
     const loader = new THREE.TextureLoader();
     const texture = loader.load(Galaxy);
     const skybox = new THREE.Mesh(
@@ -106,6 +107,7 @@ export default function Main() {
         side: THREE.BackSide,
       })
     );
+
     scene.add(skybox);
 
     // moon

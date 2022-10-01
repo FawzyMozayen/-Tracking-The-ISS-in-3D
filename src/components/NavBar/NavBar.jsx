@@ -41,6 +41,7 @@ export default function NavBar(props) {
             style={{
               color: "white",
               fontWeight: "bolder",
+              textDecoration: "underline",
             }}
             href="/"
           >
@@ -53,6 +54,7 @@ export default function NavBar(props) {
             style={{
               color: "white",
               fontWeight: "bolder",
+              textDecoration: "underline",
             }}
             href="/history"
           >
@@ -64,6 +66,7 @@ export default function NavBar(props) {
             style={{
               color: "white",
               fontWeight: "bolder",
+              textDecoration: "underline",
             }}
             href="/about"
           >

@@ -72,7 +72,7 @@ export default function History() {
                 color: "white",
               }}
               date="January 25, 1984"
-              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              iconStyle={{ background: "#0b3d91", color: "#fff" }}
               // icon={<WorkIcon />}
             >
               <h3 className="vertical-timeline-element-title">
@@ -96,7 +96,7 @@ export default function History() {
                 color: "white",
               }}
               date="November 20, 1998"
-              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
               // icon={<WorkIcon />}
             >
               <h3 className="vertical-timeline-element-title">
@@ -119,7 +119,7 @@ export default function History() {
                 color: "white",
               }}
               date="December 4, 1998"
-              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              iconStyle={{ background: "#0b3d91", color: "#fff" }}
               // icon={<WorkIcon />}
             >
               <h3 className="vertical-timeline-element-title">
@@ -141,7 +141,7 @@ export default function History() {
                 color: "white",
               }}
               date="November 2, 2000"
-              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
               // icon={<WorkIcon />}
             >
               <h3 className="vertical-timeline-element-title">
@@ -164,7 +164,7 @@ export default function History() {
                 color: "white",
               }}
               date="February 7, 2001"
-              iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
+              iconStyle={{ background: "#0b3d91", color: "#fff" }}
               // icon={<SchoolIcon />}
             >
               <h3 className="vertical-timeline-element-title">
@@ -208,7 +208,7 @@ export default function History() {
                 color: "white",
               }}
               date="February 7, 2008"
-              iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
+              iconStyle={{ background: " #0b3d91", color: "#fff" }}
               // icon={<SchoolIcon />}
             >
               <h3 className="vertical-timeline-element-title">
@@ -229,7 +229,7 @@ export default function History() {
                 color: "white",
               }}
               date="March 11, 2008"
-              iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
+              iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
               // icon={<StarIcon />}
             >
               <h3 className="vertical-timeline-element-title">
@@ -250,7 +250,7 @@ export default function History() {
                 color: "white",
               }}
               date="November 2, 2010"
-              iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
+              iconStyle={{ background: "#0b3d91", color: "#fff" }}
               // icon={<StarIcon />}
             >
               <h3 className="vertical-timeline-element-title">
@@ -269,7 +269,7 @@ export default function History() {
                 color: "white",
               }}
               date="February 2011"
-              iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
+              iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
               // icon={<StarIcon />}
             >
               <h3 className="vertical-timeline-element-title">
@@ -287,7 +287,7 @@ export default function History() {
                 color: "white",
               }}
               date="July 2011"
-              iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
+              iconStyle={{ background: "#0b3d91", color: "#fff" }}
               // icon={<StarIcon />}
             >
               <h3 className="vertical-timeline-element-title">
@@ -305,7 +305,7 @@ export default function History() {
                 color: "white",
               }}
               date="September 30, 2013"
-              iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
+              iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
               // icon={<StarIcon />}
             >
               <h3 className="vertical-timeline-element-title">
