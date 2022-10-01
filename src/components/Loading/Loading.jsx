@@ -1,6 +1,6 @@
-import React from 'react';
-import Lottie from 'react-lottie';
-import animationData from '../../animations/loading.json';
+import React from "react";
+import Lottie from "react-lottie";
+import animationData from "../../animations/loading.json";
 
 const Loading = ({ visible = false }) => {
   const defaultOptions = {
@@ -8,7 +8,7 @@ const Loading = ({ visible = false }) => {
     autoplay: true,
     animationData,
     rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice',
+      preserveAspectRatio: "xMidYMid slice",
     },
   };
 
@@ -17,20 +17,20 @@ const Loading = ({ visible = false }) => {
   return (
     <div
       style={{
-        position: 'absolute',
+        position: "absolute",
         top: 0,
         left: 0,
-        width: '100%',
-        height: '100vh',
-        background: 'rgba(0, 0, 0, 1)',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'column',
+        width: "100%",
+        height: "100vh",
+        background: "rgba(0, 0, 0, 1)",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
       }}
     >
       <Lottie options={defaultOptions} height={300} width={300} />
-      <h4 style={{ color: 'white', textAlign: 'center' }}>
+      <h4 style={{ color: "white", textAlign: "center" }}>
         The app is loading...,
         <br />
         this may take a few seconds, please wait...
