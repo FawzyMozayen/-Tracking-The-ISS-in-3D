@@ -1,3 +1,7 @@
+body{
+    background-color: #000;
+}
+
 .history{
     position: absolute;
     color: #fff;
@@ -25,4 +29,15 @@
 }
 .Section{
     margin-bottom: 10em;
+}
+
+.vertical-timeline-element-title{
+    color: #000
+}
+.vertical-timeline-element-subtitle{
+    color: #000
+}
+
+p{
+    color: #000
 }

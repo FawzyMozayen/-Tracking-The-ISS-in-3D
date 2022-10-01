@@ -11,7 +11,7 @@ export default function History() {
   useEffect(() => {
     const scene = new THREE.Scene();
 
-    const camera = new THREE.PerspectiveCamera(
+    const camera = new THREE.PerspectiveCamera( //PerspectiveCamera(fov, aspect, near, far)
       75,
       window.innerWidth / window.innerHeight,
       0.1,
@@ -53,6 +53,15 @@ export default function History() {
   return (
     <div>
       <NavBar />
+
+      <div
+      style={{
+        position: "absolute",
+        top: "10%",
+        right: "25%",
+        width: "50%",
+      }}
+      >
       
       {
       
@@ -61,6 +70,9 @@ export default function History() {
     className="vertical-timeline-element--work"
     contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+    style={{
+      color: "white",
+    }}
     date="January 25, 1984"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     // icon={<WorkIcon />}
@@ -74,8 +86,12 @@ export default function History() {
             build an international space station within the next 10 years."
     </p>
   </VerticalTimelineElement>
+
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
+    style={{
+      color: "white",
+    }}
     date="November 20, 1998"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     // icon={<WorkIcon />}
@@ -93,6 +109,9 @@ export default function History() {
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
+    style={{
+      color: "white",
+    }}
     date="December 4, 1998"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     // icon={<WorkIcon />}
@@ -109,6 +128,9 @@ export default function History() {
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
+    style={{
+      color: "white",
+    }}
     date="November 2, 2000"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     // icon={<WorkIcon />}
@@ -126,6 +148,9 @@ export default function History() {
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--education"
+    style={{
+      color: "white",
+    }}
     date="February 7, 2001"
     iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
     // icon={<SchoolIcon />}
@@ -140,6 +165,9 @@ export default function History() {
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--education"
+    style={{
+      color: "white",
+    }}
     date="December 30, 2005"
     iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
     // icon={<SchoolIcon />}
@@ -153,8 +181,12 @@ export default function History() {
     academic and private institutions.
     </p>
   </VerticalTimelineElement>
+
   <VerticalTimelineElement
     className="vertical-timeline-element--education"
+    style={{
+      color: "white",
+    }}
     date="February 7, 2008"
     iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
     // icon={<SchoolIcon />}
@@ -165,162 +197,103 @@ export default function History() {
     The European Space Agency's Columbus Laboratory becomes part of the station.
     </p>
   </VerticalTimelineElement>
+
   <VerticalTimelineElement
   
   className="vertical-timeline-element--education"
+  style={{
+    color: "white",
+  }}
     date="March 11, 2008"
     iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
     // icon={<StarIcon />}
-  />
+  >
   <h3 className="vertical-timeline-element-title">Japanese Lab Joins the ISS</h3>
     <h4 className="vertical-timeline-element-subtitle">"Bachelor Degree"</h4>
     <p>
     The first Japanese Kibo laboratory module becomes part of the station.
     </p>
+  </VerticalTimelineElement>
+
+<VerticalTimelineElement
+  
+  className="vertical-timeline-element--education"
+  style={{
+    color: "white",
+  }}
+    date="November 2, 2010"
+    iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+    // icon={<StarIcon />}
+  >
+  <h3 className="vertical-timeline-element-title">ISS 10-Year Anniversary</h3>
+    <p>
+    The ISS celebrates its 10-year anniversary of continuous human
+            occupation. Since Expedition 1 in the fall of 2000, 202 people had
+            visited the station.{" "}
+    </p>
+  </VerticalTimelineElement>
+
+  <VerticalTimelineElement
+  
+  className="vertical-timeline-element--education"
+  style={{
+    color: "white",
+  }}
+    date="February 2011"
+    iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+    // icon={<StarIcon />}
+  >
+  <h3 className="vertical-timeline-element-title">NASA Issues Cooperative Agreement</h3>
+    <p>
+    NASA issues a cooperative agreement notice for a management partner.
+    </p>
+  </VerticalTimelineElement>
+
+  <VerticalTimelineElement
+  
+  className="vertical-timeline-element--education"
+  style={{
+    color: "white",
+  }}
+    date="July 2011"
+    iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+    // icon={<StarIcon />}
+  >
+  <h3 className="vertical-timeline-element-title">NASA Selects the ISS National Lab</h3>
+    <p>
+    NASA selects the Center for the Advancement of Science in Space to
+            manage the ISS National Lab.    </p>
+  </VerticalTimelineElement>
+
+  <VerticalTimelineElement
+  
+  className="vertical-timeline-element--education"
+  style={{
+    color: "white",
+  }}
+    date="September 30, 2013"
+    iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+    // icon={<StarIcon />}
+  >
+  <h3 className="vertical-timeline-element-title">The First ISS National Lab Research Flight</h3>
+    <p>
+    Proteins can be grown as crystals in space with nearly perfect
+            three-dimensional structures useful for the development of new
+            drugs. The ISS National Lab's protein crystal growth (PCG) series of
+            flights began in 2013, allowing researchers to utilize the unique
+            environment of the ISS.
+                </p>
+  </VerticalTimelineElement>
+
 </VerticalTimeline>
 
 
       
       /* <div className="history">
-        <h1
-          style={{
-            color: "white",
-            fontSize: "50px",
-            textAlign: "center",
-            fontFamily: "sans-serif",
-            fontWeight: "bold",
-            marginBottom: "5%",
-          }}
-        >
-          History
-        </h1>
-        <div className="Section">
-          <h1 className="bigTitle">Reagan directs NASA to build the ISS</h1>
-          <h1 className="bigTitle">January 25, 1984</h1>
-          <p className="text">
-            "Just as the oceans opened up a new world for clipper ships and
-            Yankee traders, space holds enormous potential for commerce today".
-            President Ronald Reagan's State of the Union Address directs NASA to
-            build an international space station within the next 10 years.
-          </p>
-        </div>
 
-        <div className="Section">
-          <h1 className="bigTitle">First ISS Segment Launches</h1>
-          <h1 className="bigTitle">November 20, 1998</h1>
-          <p className="text">
-            The first segment of the ISS launches: The Zarya Control Module
-            launched aboard a Russian Proton rocket from Baikonur Cosmodrome,
-            Kazakhstan. Zarya (translates to "sunrise") supplied fuel storage,
-            battery power and rendezvous and docking capability for Soyuz and
-            Progress space vehicles.
-          </p>
-        </div>
 
-        <div className="Section">
-          <h1 className="bigTitle">First U.S.-built component launches</h1>
-          <h1 className="bigTitle">December 4, 1998</h1>
-          <p className="text">
-            Unity Node 1 module—the first U.S.-built component of the
-            International Space Station— launches into orbit two weeks later
-            during the STS-88 mission. Joining Unity with the Zarya module was
-            the first step in the assembly of the orbiting laboratory.
-          </p>
-        </div>
-
-        <div className="Section">
-          <h1 className="bigTitle">First Crew to Reside on Station</h1>
-          <h1 className="bigTitle">November 2, 2000</h1>
-          <p className="text">
-            NASA Astronaut Bill Shepherd and cosmonauts Yuri Gidzenko and Sergei
-            Krikalev become the first crew to reside onboard the station.
-            Expedition 1 spent four months onboard completing tasks necessary to
-            bring the ISS "to life" and began what is now more than 20 years of
-            continuous human presence in space.
-          </p>
-        </div>
-
-        <div className="Section">
-          <h1 className="bigTitle">U.S. Lab Module Added</h1>
-          <h1 className="bigTitle">February 7, 2001</h1>
-          <p className="text">
-            Destiny, the U.S. Laboratory module, becomes part of the station.
-            The lab—that increased onboard living space by 41%—continues to be
-            the primary research laboratory for U.S. payloads.
-          </p>
-        </div>
-
-        <div className="Section">
-          <h1 className="bigTitle">
-            U.S. Lab Module Recognized as Newest U.S. National Laboratory
-          </h1>
-          <h1 className="bigTitle">December 30, 2005</h1>
-          <p className="text">
-            Congress designates the U.S. portion of the ISS as the nation's
-            newest national laboratory to maximize its use for other U.S.
-            government agencies and for academic and private institutions.
-          </p>
-        </div>
-
-        <div className="Section">
-          <h1 className="bigTitle">European Lab Joins the ISS</h1>
-          <h1 className="bigTitle">February 7, 2008</h1>
-          <p className="text">
-            The European Space Agency’s Columbus Laboratory becomes part of the
-            station.
-          </p>
-        </div>
-
-        <div className="Section">
-          <h1 className="bigTitle">Japanese Lab Joins the ISS</h1>
-          <h1 className="bigTitle">March 11, 2008</h1>
-          <p className="text">
-            The first Japanese Kibo laboratory module becomes part of the
-            station.
-          </p>
-        </div>
-
-        <div className="Section">
-          <h1 className="bigTitle">ISS 10-Year Anniversary</h1>
-          <h1 className="bigTitle">November 2, 2010</h1>
-          <p className="text">
-            The ISS celebrates its 10-year anniversary of continuous human
-            occupation. Since Expedition 1 in the fall of 2000, 202 people had
-            visited the station.{" "}
-          </p>
-        </div>
-
-        <div className="Section">
-          <h1 className="bigTitle">NASA Issues Cooperative Agreement</h1>
-          <h1 className="bigTitle">February 2011</h1>
-          <p className="text">
-            NASA issues a cooperative agreement notice for a management partner.
-          </p>
-        </div>
-
-        <div className="Section">
-          <h1 className="bigTitle">NASA Selects the ISS National Lab</h1>
-          <h1 className="bigTitle">July 2011</h1>
-          <p className="text">
-            NASA selects the Center for the Advancement of Science in Space to
-            manage the ISS National Lab.
-          </p>
-        </div>
-
-        <div className="Section">
-          <h1 className="bigTitle">
-            The First ISS National Lab Research Flight
-          </h1>
-          <h1 className="bigTitle">September 30, 2013</h1>
-          <p className="text">
-            Proteins can be grown as crystals in space with nearly perfect
-            three-dimensional structures useful for the development of new
-            drugs. The ISS National Lab's protein crystal growth (PCG) series of
-            flights began in 2013, allowing researchers to utilize the unique
-            environment of the ISS.
-          </p>
-        </div>
       </div> */}
+      </div>
     </div>
   );
 }
