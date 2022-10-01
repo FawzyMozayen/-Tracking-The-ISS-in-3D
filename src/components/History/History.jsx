@@ -21,17 +21,18 @@ export default function History() {
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
-    const geometry = new THREE.SphereGeometry(1, 32, 32);
+    const geometry = new THREE.SphereGeometry(5, 100, 100); // ( radius, widthSegments, heightSegments )
     const material = new THREE.MeshBasicMaterial({
       map: new THREE.TextureLoader().load(moon),
     });
     const sphere = new THREE.Mesh(geometry, material);
     scene.add(sphere);
     camera.position.z = 5;
+    camera.position.y = 4;
+    camera.position.x = -5;
     const animate = function () {
       requestAnimationFrame(animate);
-      sphere.rotation.x += 0.01;
-      sphere.rotation.y += 0.01;
+      sphere.rotation.x += -0.005;
       renderer.render(scene, camera);
     };
     animate();
@@ -57,9 +58,7 @@ export default function History() {
       <div
       style={{
         position: "absolute",
-        top: "10%",
-        right: "25%",
-        width: "50%",
+        width: "100%",
       }}
       >
       
