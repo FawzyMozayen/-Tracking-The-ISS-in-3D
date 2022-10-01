@@ -61,93 +61,125 @@ export default function History() {
     className="vertical-timeline-element--work"
     contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-    date="2011 - present"
+    date="January 25, 1984"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     // icon={<WorkIcon />}
   >
-    <h3 className="vertical-timeline-element-title">Creative Director</h3>
-    <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
+    <h3 className="vertical-timeline-element-title">Reagan directs NASA to build the ISS</h3>
+    <h4 className="vertical-timeline-element-subtitle">"Miami, FL"</h4>
     <p>
-      Creative Direction, User Experience, Visual Design, Project Management, Team Leading
+    "Just as the oceans opened up a new world for clipper ships and
+            Yankee traders, space holds enormous potential for commerce today".
+            President Ronald Reagan's State of the Union Address directs NASA to
+            build an international space station within the next 10 years."
     </p>
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
-    date="2010 - 2011"
+    date="November 20, 1998"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     // icon={<WorkIcon />}
   >
-    <h3 className="vertical-timeline-element-title">Art Director</h3>
-    <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+    <h3 className="vertical-timeline-element-title">First ISS Segment Launches</h3>
+    <h4 className="vertical-timeline-element-subtitle">"San Francisco, CA"</h4>
     <p>
-      Creative Direction, User Experience, Visual Design, SEO, Online Marketing
+    The first segment of the ISS launches: The Zarya Control
+     Module launched aboard a Russian Proton rocket 
+     from Baikonur Cosmodrome, Kazakhstan. Zarya 
+     (translates to "sunrise") supplied fuel storage,
+      battery power and rendezvous and 
+      docking capability for Soyuz and Progress space vehicles.
     </p>
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
-    date="2008 - 2010"
+    date="December 4, 1998"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     // icon={<WorkIcon />}
   >
-    <h3 className="vertical-timeline-element-title">Web Designer</h3>
-    <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
+    <h3 className="vertical-timeline-element-title">First U.S.-built component launches</h3>
+    <h4 className="vertical-timeline-element-subtitle">"Los Angeles, CA"</h4>
     <p>
-      User Experience, Visual Design
+    Unity Node 1 module—the first U.S.-built component 
+    of the International Space Station— launches into 
+    orbit two weeks later during the STS-88 mission. 
+    Joining Unity with the Zarya module was the first 
+    step in the assembly of the orbiting laboratory.
     </p>
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
-    date="2006 - 2008"
+    date="November 2, 2000"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     // icon={<WorkIcon />}
   >
-    <h3 className="vertical-timeline-element-title">Web Designer</h3>
-    <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+    <h3 className="vertical-timeline-element-title">First Crew to Reside on Station</h3>
+    <h4 className="vertical-timeline-element-subtitle">"San Francisco, CA"</h4>
     <p>
-      User Experience, Visual Design
+    NASA Astronaut Bill Shepherd and cosmonauts Yuri 
+    Gidzenko and Sergei Krikalev become the first 
+    crew to reside onboard the station. Expedition 
+    1 spent four months onboard completing tasks 
+    necessary to bring the ISS "to  life" and began 
+    what is now more than 20 years of continuous human presence in space.
     </p>
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--education"
-    date="April 2013"
+    date="February 7, 2001"
     iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
     // icon={<SchoolIcon />}
   >
-    <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
-    <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
+    <h3 className="vertical-timeline-element-title">U.S. Lab Module Added</h3>
+    <h4 className="vertical-timeline-element-subtitle">"Online Course"</h4>
     <p>
-      Strategy, Social Media
+    Destiny, the U.S. Laboratory module, becomes part of the station. 
+    The lab—that increased onboard  living space by 41%—continues 
+    to be the primary research laboratory for U.S. payloads.
     </p>
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--education"
-    date="November 2012"
+    date="December 30, 2005"
     iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
     // icon={<SchoolIcon />}
   >
-    <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
-    <h4 className="vertical-timeline-element-subtitle">Certification</h4>
+    <h3 className="vertical-timeline-element-title">U.S. Lab Module Recognized as Newest U.S. National Laboratory</h3>
+    <h4 className="vertical-timeline-element-subtitle">"Certification"</h4>
     <p>
-      Creative Direction, User Experience, Visual Design
+    Congress designates the U.S. portion of the ISS as 
+    the nation's newest national laboratory to maximize 
+    its use for other U.S. government agencies and for 
+    academic and private institutions.
     </p>
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--education"
-    date="2002 - 2006"
+    date="February 7, 2008"
     iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
     // icon={<SchoolIcon />}
   >
-    <h3 className="vertical-timeline-element-title">Bachelor of Science in Interactive Digital Media Visual Imaging</h3>
-    <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
+    <h3 className="vertical-timeline-element-title">European Lab Joins the ISS</h3>
+    <h4 className="vertical-timeline-element-subtitle">"Bachelor Degree"</h4>
     <p>
-      Creative Direction, Visual Design
+    The European Space Agency's Columbus Laboratory becomes part of the station.
     </p>
   </VerticalTimelineElement>
   <VerticalTimelineElement
+  
+  className="vertical-timeline-element--education"
+    date="March 11, 2008"
     iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
     // icon={<StarIcon />}
   />
+  <h3 className="vertical-timeline-element-title">Japanese Lab Joins the ISS</h3>
+    <h4 className="vertical-timeline-element-subtitle">"Bachelor Degree"</h4>
+    <p>
+    The first Japanese Kibo laboratory module becomes part of the station.
+    </p>
 </VerticalTimeline>
+
+
       
       /* <div className="history">
         <h1
