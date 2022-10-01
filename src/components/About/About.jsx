@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import "../Home/Main.css";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
@@ -235,7 +235,6 @@ export default function Main() {
               fontSize: 16,
               lineHeight: 1.2,
               userSelect: "none",
-              cursor: "pointer",
               marginTop: "1em",
             }}
           >
@@ -263,7 +262,6 @@ export default function Main() {
               fontSize: 16,
               lineHeight: 1.2,
               userSelect: "none",
-              cursor: "pointer",
               marginTop: "1em",
             }}
           >
