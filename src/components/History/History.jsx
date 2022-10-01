@@ -84,9 +84,9 @@ export default function History() {
               <p>
                 "Just as the oceans opened up a new world for clipper ships and
                 Yankee traders, space holds enormous potential for commerce
-                today". President Ronald Reagan's State of the Union Address
-                directs NASA to build an international space station within the
-                next 10 years."
+                today". In his State of the Union Address, President Ronald
+                Reagan directed NASA to establish an international space station
+                over the following ten years.
               </p>
             </VerticalTimelineElement>
 
@@ -106,11 +106,11 @@ export default function History() {
                 "San Francisco, CA"
               </h4>
               <p>
-                The first segment of the ISS launches: The Zarya Control Module
-                launched aboard a Russian Proton rocket from Baikonur
-                Cosmodrome, Kazakhstan. Zarya (translates to "sunrise") supplied
-                fuel storage, battery power and rendezvous and docking
-                capability for Soyuz and Progress space vehicles.
+                The Zarya Control Module was launched aboard a Russian Proton
+                rocket from the Baikonur Cosmodrome in Kazakhstan as the first
+                module of the International Space Station. Zarya (which means
+                "sunrise") provided fuel storage, battery power, and rendezvous
+                and docking capabilities for the Soyuz and Progress spacecraft.
               </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
@@ -129,10 +129,11 @@ export default function History() {
                 "Los Angeles, CA"
               </h4>
               <p>
-                Unity Node 1 module—the first U.S.-built component of the
-                International Space Station— launches into orbit two weeks later
-                during the STS-88 mission. Joining Unity with the Zarya module
-                was the first step in the assembly of the orbiting laboratory.
+                The STS-88 mission puts the Unity Node 1 module, the first
+                component of the International Space Station developed in the
+                United States, into orbit two weeks later. The initial stage in
+                assembling the orbiting laboratory was to connect Unity with the
+                Zarya module.
               </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
@@ -151,11 +152,11 @@ export default function History() {
                 "San Francisco, CA"
               </h4>
               <p>
-                NASA Astronaut Bill Shepherd and cosmonauts Yuri Gidzenko and
-                Sergei Krikalev become the first crew to reside onboard the
-                station. Expedition 1 spent four months onboard completing tasks
-                necessary to bring the ISS "to life" and began what is now more
-                than 20 years of continuous human presence in space.
+                NASA astronaut Bill Shepherd and cosmonauts Yuri Gidzenko and
+                Sergei Krikalev become the station's first residents. Expedition
+                1 stayed onboard for four months, performing operations that
+                brought the ISS "to life" and kicked off what has already been
+                more than 20 years of continuous human presence in space.
               </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
@@ -174,10 +175,9 @@ export default function History() {
                 "Online Course"
               </h4>
               <p>
-                Destiny, the U.S. Laboratory module, becomes part of the
-                station. The lab—that increased onboard living space by
-                41%—continues to be the primary research laboratory for U.S.
-                payloads.
+                Destiny, the US Laboratory module, joins the station. The lab,
+                which has boosted onboard living space by 41%, remains the
+                primary research laboratory for US payloads.
               </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
@@ -196,9 +196,10 @@ export default function History() {
                 "Certification"
               </h4>
               <p>
-                Congress designates the U.S. portion of the ISS as the nation's
-                newest national laboratory to maximize its use for other U.S.
-                government agencies and for academic and private institutions.
+                The US part of the ISS is designated as the nation's newest
+                national laboratory by Congress in order to maximize its
+                utilization by other US government organizations as well as
+                academic and business institutions.
               </p>
             </VerticalTimelineElement>
 
@@ -218,8 +219,8 @@ export default function History() {
                 "Bachelor Degree"
               </h4>
               <p>
-                The European Space Agency's Columbus Laboratory becomes part of
-                the station.
+                The Columbus Laboratory of the European Space Agency is
+                integrated inside the station.
               </p>
             </VerticalTimelineElement>
 
@@ -239,7 +240,7 @@ export default function History() {
                 "Bachelor Degree"
               </h4>
               <p>
-                The first Japanese Kibo laboratory module becomes part of the
+                The first Japanese Kibo laboratory module is integrated into the
                 station.
               </p>
             </VerticalTimelineElement>
@@ -257,9 +258,9 @@ export default function History() {
                 ISS 10-Year Anniversary
               </h3>
               <p>
-                The ISS celebrates its 10-year anniversary of continuous human
-                occupation. Since Expedition 1 in the fall of 2000, 202 people
-                had visited the station.{" "}
+                The International Space Station marks ten years of uninterrupted
+                human habitation. The station had been visited by 202 persons
+                since Expedition 1 in the fall of 2000.
               </p>
             </VerticalTimelineElement>
 
@@ -276,8 +277,8 @@ export default function History() {
                 NASA Issues Cooperative Agreement
               </h3>
               <p>
-                NASA issues a cooperative agreement notice for a management
-                partner.
+                NASA publishes a notification of a cooperation agreement seeking
+                a management partner.
               </p>
             </VerticalTimelineElement>
 
@@ -294,8 +295,9 @@ export default function History() {
                 NASA Selects the ISS National Lab
               </h3>
               <p>
-                NASA selects the Center for the Advancement of Science in Space
-                to manage the ISS National Lab.{" "}
+                NASA has chosen the Center for the Advancement of Science in
+                Space to oversee the International Space Station National
+                Laboratory.
               </p>
             </VerticalTimelineElement>
 
@@ -312,11 +314,11 @@ export default function History() {
                 The First ISS National Lab Research Flight
               </h3>
               <p>
-                Proteins can be grown as crystals in space with nearly perfect
-                three-dimensional structures useful for the development of new
-                drugs. The ISS National Lab's protein crystal growth (PCG)
-                series of flights began in 2013, allowing researchers to utilize
-                the unique environment of the ISS.
+                Protein crystals with nearly flawless three-dimensional
+                structures may be generated in space and used to develop novel
+                therapeutics. The ISS National Lab's protein crystal growth
+                (PCG) flight series began in 2013, allowing researchers to take
+                use of the ISS's unique environment.
               </p>
             </VerticalTimelineElement>
           </VerticalTimeline>
