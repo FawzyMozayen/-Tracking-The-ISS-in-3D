@@ -1,10 +1,9 @@
 import React from "react";
 import "./History.css";
-import { useRef, useEffect, useState } from "react";
+import { useEffect } from "react";
 import * as THREE from "three";
 import NavBar from "../NavBar/NavBar";
 import moon from "../../Images/moon.jpeg";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 export default function History() {
   useEffect(() => {
