@@ -59,11 +59,7 @@ export default function Main() {
     // camera.lookAt(new THREE.Vector3());
 
     const followIss = () => {
-      camera.position.set(
-        iss.position.x + 2,
-        iss.position.y + 2,
-        iss.position.z + 5
-      );
+      camera.position.set(iss.position.x + 2, iss.position.y + 2, 10);
       camera.lookAt(iss.position);
     };
     followIss();
@@ -196,6 +192,97 @@ export default function Main() {
           height: "100vh",
         }}
       ></div>
+      {!loading.loading && (
+        <div
+          style={{
+            position: "absolute",
+            top: "20vh",
+            left: "15vw",
+            width: "70vw",
+            right: "15vw",
+            borderRadius: ".8em",
+          }}
+        >
+          <div
+            style={{
+              padding: "1em",
+              width: "15%",
+              color: "#000",
+              background: "rgba(255, 255, 255, 0.2)",
+              borderRadius: ".8em",
+              fontSize: 20,
+              fontWeight: "bold",
+              lineHeight: 1.2,
+              userSelect: "none",
+              cursor: "pointer",
+            }}
+          >
+            <p
+              style={{
+                color: "white",
+              }}
+            >
+              About Us
+            </p>
+          </div>
+          <div
+            style={{
+              padding: "1em",
+              width: "70%",
+              color: "#000",
+              background: "rgba(255, 255, 255, 0.2)",
+              borderRadius: ".8em",
+              fontSize: 16,
+              lineHeight: 1.2,
+              userSelect: "none",
+              cursor: "pointer",
+              marginTop: "1em",
+            }}
+          >
+            <p
+              style={{
+                color: "white",
+              }}
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
+              modi veniam, atque aperiam voluptatem corrupti error, cumque quis
+              sint obcaecati nisi est ratione quia et eveniet minima
+              consequuntur, exercitationem officiis? Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Et itaque culpa sunt voluptatum
+              illo. Ab dignissimos dolores veritatis placeat, eos aut id
+              provident a nesciunt facilis saepe iure! Architecto, velit.
+            </p>
+          </div>
+          <div
+            style={{
+              padding: "1em",
+              width: "70%",
+              color: "#000",
+              background: "rgba(255, 255, 255, 0.2)",
+              borderRadius: ".8em",
+              fontSize: 16,
+              lineHeight: 1.2,
+              userSelect: "none",
+              cursor: "pointer",
+              marginTop: "1em",
+            }}
+          >
+            <p
+              style={{
+                color: "white",
+              }}
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
+              modi veniam, atque aperiam voluptatem corrupti error, cumque quis
+              sint obcaecati nisi est ratione quia et eveniet minima
+              consequuntur, exercitationem officiis? Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Sint in nobis laborum reprehenderit,
+              aperiam doloribus quis maxime dolor nesciunt eveniet dignissimos
+              quidem provident dicta ipsa, pariatur unde! Ratione, accusamus in?
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
