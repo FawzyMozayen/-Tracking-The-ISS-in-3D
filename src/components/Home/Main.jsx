@@ -18,11 +18,14 @@ import Galaxy from "../../Images/galaxy.png";
 //Components
 import NavBar from "../NavBar/NavBar";
 import Credit from "../Credit/Credit";
+import Spot from "../Spot/Spot";
 
 export default function Main() {
   //Groups
   const iss = new THREE.Group();
   const earth = new THREE.Group();
+
+  const [showSpot, setShowSpot] = useState(false);
 
   const [userLocation, setUserLocation] = useState({
     lat: 0,
@@ -120,7 +123,7 @@ export default function Main() {
     });
 
     //Interval update position
-    const interval = setInterval(() => getIssLocation(), 2000);
+    const interval = setInterval(() => getIssLocation(), 5000);
 
     //OrbitControls
     const orbitControls = new OrbitControls(camera, renderer.domElement);
@@ -354,7 +357,9 @@ export default function Main() {
               lineHeight: 1.2,
               userSelect: "none",
             }}
-            onClick={() => (window.location.href = "/how-to-spot-the-iss")}
+            onClick={() => {
+              setShowSpot(!showSpot);
+            }}
           >
             <h4
               style={{
@@ -365,6 +370,7 @@ export default function Main() {
               How do I Spot The Station?
             </h4>
           </div>
+          {showSpot && <Spot />}
           <Credit />
         </>
       )}
