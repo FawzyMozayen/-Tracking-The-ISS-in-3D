@@ -68,10 +68,6 @@ export default function History() {
           <VerticalTimeline>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-              contentArrowStyle={{
-                borderRight: "7px solid  rgb(33, 150, 243)",
-              }}
               style={{
                 color: "white",
               }}
