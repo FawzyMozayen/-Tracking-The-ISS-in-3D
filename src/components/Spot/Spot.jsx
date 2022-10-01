@@ -5,15 +5,16 @@ export default function Spot() {
     <div
       style={{
         position: "absolute",
-        left: "25%",
-        right: "25%",
-        top: "20%",
-        bottom: "20%",
+        left: "15%",
+        right: "15%",
+        top: "15%",
+        bottom: "15%",
         zIndex: 1,
         marginLeft: 15,
         marginTop: 15,
         padding: "1em",
-        width: "50%",
+        width: "60%",
+        height:"70%",
         color: "#000",
         background: "rgba(255, 255, 255, 0.7)",
         borderRadius: ".8em",
@@ -23,52 +24,48 @@ export default function Spot() {
       }}
     >
       <div>
-        <h1>How do I Spot the Station?</h1>
+        <h1 style={{textAlign: "center",
+            marginBottom: "3%",}}>How do I Spot the Station?</h1>
         <div>
-          <h2>Time</h2>
-          <p>
-            is when the sighting opportunity will begin in your local time zone.
-            All sightings will occur within a few hours before or after sunrise
-            or sunset. This is the optimum viewing period as the sun reflects
-            off the space station and contrasts against the darker sky.
+          <h3 style={{marginBottom: "1%",}}>Time</h3>
+          <p style={{marginBottom: "2%"}}>
+            In your local time zone, this is the moment the sighting chance will start. 
+            Every sighting will take place within a few hours of dawn or sunset. 
+            The sun's reflection from the space station and contrast with the dimmer sky make this the best viewing time.
           </p>
         </div>
         <div>
-          <h2>Visible</h2>
-          <p>
-            is the maximum time period the space station is visible before
-            crossing back below the horizon.
+          <h3 style={{marginBottom: "1%",}}>Visible</h3>
+          <p style={{marginBottom: "2%",}}>
+            The longest the space station may be seen before dipping back below the horizon.
           </p>
         </div>
         <div>
-          <h2>Max Height</h2>
-          <p>
-            is measured in degrees (also known as elevation). It represents the
-            height of the space station from the horizon in the night sky. The
-            horizon is at zero degrees, and directly overhead is ninety degrees.
-            If you hold your fist at arm's length and place your fist resting on
-            the horizon, the top will be about 10 degrees.
+          <h3 style={{marginBottom: "1%",}}>Max Height</h3>
+          <p style={{marginBottom: "2%",}}>
+            Determined by degrees (also known as elevation). 
+            It depicts how far away from the horizon in the night sky the space station is. 
+            90 degrees is straight overhead and 0 degrees is the horizon. 
+            The top will be roughly 10 degrees if you hold your fist out at arm's length with your fist resting on the horizon.
           </p>
         </div>
         <div>
-          <h2>Appears</h2>
-          <p>
-            is the location in the sky where the station will be visible first.
-            This value, like maximum height, also is measured in degrees from
-            the horizon. The letters represent compass directions -- N is north,
-            WNW is west by northwest, and so on.
+          <h3 style={{marginBottom: "1%",}}>Appears</h3>
+          <p style={{marginBottom: "2%",}}>
+            The vantage point in the sky from which the station will initially be seen. 
+            This value is expressed in degrees from the horizon, just like the greatest height. 
+            The letters stand for compass directions; for example, N stands for north and WNW for west by northwest.
           </p>
         </div>
         <div>
-          <h2>Disappears</h2>
-          <p>
-            represents where in the night sky the International Space Station
-            will leave your field of view.
+          <h3 style={{marginBottom: "1%",}}>Disappears</h3>
+          <p style={{marginBottom: "2%",}}>
+            It shows where the International Space Station will disappear from view in the night sky.
           </p>
         </div>
         {/* <img src="../../Images/astro_horizon.png" /> */}
         <div>
-          <p>
+          <p style={{marginBottom: "2%",}}>
             Important: The International Space Station orbits with an
             inclination of 51.6 degrees. This means that, as it orbits, the
             farthest north and south of the Equator it will ever go is 51.6
@@ -81,7 +78,7 @@ export default function Spot() {
           </p>
         </div>
         <div>
-          <p>
+          <p style={{marginBottom: "2%",}}>
             The space station looks like an airplane or a very bright star
             moving across the sky, except it doesn't have flashing lights or
             change direction. It will also be moving considerably faster than a
