@@ -198,10 +198,10 @@ export default function Main() {
     earth.add(cloudMesh);
 
     //Light
-    const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 3);
     scene.add(ambientLight);
 
-    const pointLight = new THREE.PointLight(0xffffff, 1);
+    const pointLight = new THREE.PointLight(0xffffff, 3);
     pointLight.position.set(6, 6, 6);
     scene.add(pointLight);
 
