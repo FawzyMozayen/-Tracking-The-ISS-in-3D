@@ -130,6 +130,9 @@ export default function Main() {
 
     //Interval update position
     const interval = setInterval(() => getIssLocation(), 2000);
+    const old = setInterval(() => {
+      oldIssInfo.pop();
+    }, 30000);
 
     //OrbitControls
     const orbitControls = new OrbitControls(camera, renderer.domElement);
@@ -166,9 +169,10 @@ export default function Main() {
 
     //Earth Model
     gltfLoader.load(
-      "./models/earth/Earth.gltf",
+      "./models/earth/earthDraco.gltf",
       (gltf) => {
-        gltf.scene.scale.set(0.0033, 0.0033, 0.0033);
+        // gltf.scene.scale.set(0.0033, 0.0033, 0.0033);
+        gltf.scene.scale.set(0.02, 0.02, 0.02);
         gltf.scene.rotateY(-4.7);
         earth.add(gltf.scene);
         scene.add(earth);
@@ -205,10 +209,10 @@ export default function Main() {
     earth.add(cloudMesh);
 
     //Light
-    const ambientLight = new THREE.AmbientLight(0xffffff, 3);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 2.5);
     scene.add(ambientLight);
 
-    const pointLight = new THREE.PointLight(0xffffff, 3);
+    const pointLight = new THREE.PointLight(0xffffff, 2.5);
     pointLight.position.set(6, 6, 6);
     scene.add(pointLight);
 
@@ -224,6 +228,7 @@ export default function Main() {
       window.removeEventListener("resize", resize);
       currentRef.removeChild(renderer.domElement);
       clearInterval(interval);
+      clearInterval(old);
     };
   }, []);
 
