@@ -92,23 +92,21 @@ class Quiz extends Component {
             {questions.map((question, index) => {
               return (
                 <div className="questionContainer" key={index}>
-                  <h2>{question.question}</h2>
+                  <h3 style={{marginBottom: "2%",}}>{question.question}</h3>
                   <div className="optionsContainer">
                     {question.options.map((option, index) => {
                       return (
                         <div className="option" key={index}>
                           <button
                             style={{
-                              backgroundColor:
-                                this.state.selectedOption === option
-                                  ? "blue"
-                                  : "white",
+                              backgroundColor: "rgba(255, 255, 255, 0.5)",
                               padding: "10px",
                               paddingLeft: "50px",
                               paddingRight: "50px",
                               margin: "10px",
-                              borderRadius: "5px",
-                              boxShadow: "0px 0px 3px 0px rgba(0,0,0,0.75)",
+                              borderRadius: "15px",
+                              borderWidth: "1px",
+                              boxShadow: "0px 0px 3px 0px rgba(0,0,0,0.4)",
                               cursor: "pointer",
                               alignSelf: "center",
                             }}
