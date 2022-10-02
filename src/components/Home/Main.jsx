@@ -46,50 +46,37 @@ export default function Main() {
   const getIssLocationNow = useApi(issLocation.getIssLocationNow);
 
   const getIssLocation = async () => {
-    var holderRemoveLater = 1;
     const issLocation = await getIssLocationNow.request();
     const { altitude, latitude, longitude, velocity, daynum, visibility } =
       issLocation?.data;
-    setIssInfo({ altitude, latitude, longitude, velocity, daynum, visibility }); 
-
-    setOldIssInfo((oldIssInfo) => [
-      ...oldIssInfo, 
-      { latitude, longitude, holderRemoveLater },
-    ]);
-    
+    setIssInfo({ altitude, latitude, longitude, velocity, daynum, visibility });
     const pos = calcPosFromLatLonRad({
       lat: latitude,
       lon: longitude,
       radius: 1,
     });
     iss.position.set(pos.x, pos.y, pos.z);
-    placeSphere(oldIssInfo);
   };
 
-
-  // placeSphere is the function that places the sphere on the map and updates the position of the sphere as the ISS moves around the globe 
-
-  const placeSphere = (oldIssInfo) => { // This function is not working properly yet 
+  // placeSphere is the function that places the sphere
+  //on the map and updates the position of the sphere as the ISS moves around the globe
+  const placeSphere = () => {
+    // This function is not working properly yet
     oldIssInfo.forEach((element) => {
-      const pos = calcPosFromLatLonRad({ 
+      const pos = calcPosFromLatLonRad({
         lat: element.latitude,
         lon: element.longitude,
         radius: 1,
       });
-
       const geometry = new THREE.SphereGeometry(0.01, 2, 2);
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    const sphere = new THREE.Mesh(geometry, material);
-    sphere.position.set(pos.x, pos.y, pos.z); 
-    earth.add(sphere);
+      const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+      const sphere = new THREE.Mesh(geometry, material);
+      sphere.position.set(pos.x, pos.y, pos.z);
+      earth.add(sphere);
     });
   };
 
-
-  
-
   const distanceInMeters = (lat1, lon1, lat2, lon2) => {
-
     // lat1 and lon2 are the user location and lat1 and lon2 are the iss location
     // generally used geo measurement function
     const R = 6371e3; // metres
@@ -104,7 +91,7 @@ export default function Main() {
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
     const d = R * c; // in metres
-    
+
     return d; // d is the distance between the user and the iss in meters
   };
 
@@ -118,7 +105,7 @@ export default function Main() {
 
     //Scene, camera, renderer
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(25, width / height, 0.1, 100); 
+    const camera = new THREE.PerspectiveCamera(25, width / height, 0.1, 100);
     scene.add(camera);
     camera.position.set(3, 3, 4);
     camera.lookAt(new THREE.Vector3());
@@ -158,10 +145,16 @@ export default function Main() {
       setUserLocation({ lat: latitude, lon: longitude });
     });
 
-    const interval = setInterval(() => getIssLocation(), 2000); // get the iss location every 2 seconds
-    const old = setInterval(() => { // remove the old iss location every 10 seconds
-      oldIssInfo.pop(); // remove the last element of the array
-    }, 5000); // 30 seconds
+    const interval = setInterval(() => {
+      console.log(issInfo);
+      getIssLocation();
+
+      // placeSphere();
+    }, 2000); // get the iss location every 2 seconds
+    // const old = setInterval(() => {
+    //   // remove the old iss location every 10 seconds
+    //   oldIssInfo.pop(); // remove the last element of the array
+    // }, 5000); // 30 seconds
 
     //OrbitControls
     const orbitControls = new OrbitControls(camera, renderer.domElement);
@@ -257,7 +250,7 @@ export default function Main() {
       window.removeEventListener("resize", resize);
       currentRef.removeChild(renderer.domElement);
       clearInterval(interval);
-      clearInterval(old);
+      // clearInterval(old);
     };
   }, []);
 
