@@ -265,7 +265,7 @@ export default function Main() {
                 color: "black",
               }}
             >
-              Dreem utilized Node JS and Three JS to make all of this happen to introduce a new way of displaying the ISS in 3D with life-like animations.
+              Dreem utilized ReactJS and Three JS to make all of this happen to introduce a new way of displaying the ISS in 3D with life-like animations.
             </p>
           </div>
         </div>
