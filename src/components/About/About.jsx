@@ -208,7 +208,7 @@ export default function Main() {
               padding: "1em",
               width: "15%",
               color: "#000",
-              background: "rgba(255, 255, 255, 0.2)",
+              background: "rgba(255, 255, 255, 0.5)",
               borderRadius: ".8em",
               fontSize: 20,
               fontWeight: "bold",
@@ -219,7 +219,7 @@ export default function Main() {
           >
             <p
               style={{
-                color: "white",
+                color: "black",
               }}
             >
               About Us
@@ -230,26 +230,21 @@ export default function Main() {
               padding: "1em",
               width: "70%",
               color: "#000",
-              background: "rgba(255, 255, 255, 0.2)",
+              background: "rgba(255, 255, 255, 0.5)",
               borderRadius: ".8em",
-              fontSize: 16,
-              lineHeight: 1.2,
+              fontSize: 14,
+              lineHeight: 1.5,
               userSelect: "none",
               marginTop: "1em",
             }}
           >
             <p
               style={{
-                color: "white",
+                color: "black",
               }}
             >
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
-              modi veniam, atque aperiam voluptatem corrupti error, cumque quis
-              sint obcaecati nisi est ratione quia et eveniet minima
-              consequuntur, exercitationem officiis? Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Et itaque culpa sunt voluptatum
-              illo. Ab dignissimos dolores veritatis placeat, eos aut id
-              provident a nesciunt facilis saepe iure! Architecto, velit.
+              Dreem started with the idea of creating an ISS tracker which later evolved into greater more interactive ideas, for example, a history page about the ISS and all its milestones. 
+              The user’s location is taken to calculate how far the ISS is from them; the website will also have capabilities that allows users to see the ISS location throughout the day.
             </p>
           </div>
           <div
@@ -257,26 +252,20 @@ export default function Main() {
               padding: "1em",
               width: "70%",
               color: "#000",
-              background: "rgba(255, 255, 255, 0.2)",
+              background: "rgba(255, 255, 255, 0.5)",
               borderRadius: ".8em",
-              fontSize: 16,
-              lineHeight: 1.2,
+              fontSize: 14,
+              lineHeight: 1.5,
               userSelect: "none",
               marginTop: "1em",
             }}
           >
             <p
               style={{
-                color: "white",
+                color: "black",
               }}
             >
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
-              modi veniam, atque aperiam voluptatem corrupti error, cumque quis
-              sint obcaecati nisi est ratione quia et eveniet minima
-              consequuntur, exercitationem officiis? Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Sint in nobis laborum reprehenderit,
-              aperiam doloribus quis maxime dolor nesciunt eveniet dignissimos
-              quidem provident dicta ipsa, pariatur unde! Ratione, accusamus in?
+              Dreem utilized Node JS and Three JS to make all of this happen to introduce a new way of displaying the ISS in 3D with life-like animations.
             </p>
           </div>
         </div>
