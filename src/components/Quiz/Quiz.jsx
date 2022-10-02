@@ -41,7 +41,7 @@ const questions = [
       "Russia",
     	"China",
     ],
-    answer: "Russia"
+    answer: "Kazakhstan"
   },
   {
     question: "When was the first US built component sent into orbit?",
@@ -111,6 +111,7 @@ class Quiz extends Component {
         backgroundColor: "#F5F5F5",
       }}
       >
+        <NavBar />
       <h1>
         Quiz Time (Not Done Yet)
       </h1>
