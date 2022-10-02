@@ -40,7 +40,7 @@ const questions = [
       "Russia",
     	"China",
     ],
-    answer: "Russia"
+    answer: "Kazakhstan"
   },
   {
     question: "When was the first US built component sent into orbit?",
@@ -101,13 +101,21 @@ class Quiz extends Component {
     return (
       <div
       style={{
+        backgroundColor: "white",
+        width: "100%",
+        height: "100%",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
         alignItems: "center",
-        height: "100vh",
-        width: "100vw",
-        backgroundColor: "#F5F5F5",
+        justifyContent: "center",
+        textAlign: "center",
+        fontSize: "1.5rem",
+        fontFamily: "sans-serif",
+        color: "black",
+        padding: "1rem",
+        borderRadius: "1rem",
+        boxShadow: "0 0 1rem rgba(0, 0, 0, 0.2)",
+        
       }}
       >
       <h1>
@@ -117,6 +125,7 @@ class Quiz extends Component {
       <div 
       className='quizContainer'
       >
+
         {questions.map((question, index) => {
           return (
             <div
