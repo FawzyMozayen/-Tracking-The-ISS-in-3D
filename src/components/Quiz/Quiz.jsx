@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./quiz.css";
+import NavBar from "../NavBar/NavBar";
 
 
 const questions = [
