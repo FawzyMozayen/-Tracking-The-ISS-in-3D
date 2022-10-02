@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./quiz.css";
 import NavBar from "../NavBar/NavBar";
+import Galaxy from "../../Images/galaxy.png";
 
 
 const questions = [
@@ -110,7 +111,7 @@ class Quiz extends Component {
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
-        fontSize: "1.5rem",
+        fontSize: "14",
         fontFamily: "sans-serif",
         color: "black",
         padding: "1rem",
@@ -155,6 +156,7 @@ class Quiz extends Component {
                         borderRadius: "5px",
                         boxShadow: "0px 0px 3px 0px rgba(0,0,0,0.75)",
                         cursor: "pointer",
+                        alignSelf: "center"
                       }
                     }
                       onClick={() => {
