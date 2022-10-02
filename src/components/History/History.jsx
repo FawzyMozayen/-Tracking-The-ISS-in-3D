@@ -78,9 +78,9 @@ export default function History() {
               <h3 className="vertical-timeline-element-title">
                 Reagan directs NASA to build the ISS
               </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                "Miami, FL"
-              </h4>
+              <h6 className="vertical-timeline-element-subtitle">
+              State of the Union address
+              </h6>
               <p>
                 "Just as the oceans opened up a new world for clipper ships and
                 Yankee traders, space holds enormous potential for commerce
@@ -96,15 +96,15 @@ export default function History() {
                 color: "white",
               }}
               date="November 20, 1998"
-              iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
+              iconStyle={{ background: "rgb(237,25,39,255)", color: "#fff" }}
               // icon={<WorkIcon />}
             >
               <h3 className="vertical-timeline-element-title">
                 First ISS Segment Launches
               </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                "San Francisco, CA"
-              </h4>
+              <h6 className="vertical-timeline-element-subtitle">
+              Baikonur Cosmodrome, Kazakhstan
+              </h6>
               <p>
                 The Zarya Control Module was launched aboard a Russian Proton
                 rocket from the Baikonur Cosmodrome in Kazakhstan as the first
@@ -125,9 +125,9 @@ export default function History() {
               <h3 className="vertical-timeline-element-title">
                 First U.S.-built component launches
               </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                "Los Angeles, CA"
-              </h4>
+              <h6 className="vertical-timeline-element-subtitle">
+                Marshall Space Flight Center in Huntsville, Alabama
+              </h6>
               <p>
                 The STS-88 mission puts the Unity Node 1 module, the first
                 component of the International Space Station developed in the
@@ -142,15 +142,15 @@ export default function History() {
                 color: "white",
               }}
               date="November 2, 2000"
-              iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
+              iconStyle={{ background: "rgb(237,25,39,255)", color: "#fff" }}
               // icon={<WorkIcon />}
             >
               <h3 className="vertical-timeline-element-title">
                 First Crew to Reside on Station
               </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                "San Francisco, CA"
-              </h4>
+              <h6 className="vertical-timeline-element-subtitle">
+                Baikonur Cosmodrome, Kazakhstan.
+              </h6>
               <p>
                 NASA astronaut Bill Shepherd and cosmonauts Yuri Gidzenko and
                 Sergei Krikalev become the station's first residents. Expedition
@@ -171,9 +171,9 @@ export default function History() {
               <h3 className="vertical-timeline-element-title">
                 U.S. Lab Module Added
               </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                "Online Course"
-              </h4>
+              <h6 className="vertical-timeline-element-subtitle">
+                Marshall Space Flight Center in Huntsville, Alabama.
+              </h6>
               <p>
                 Destiny, the US Laboratory module, joins the station. The lab,
                 which has boosted onboard living space by 41%, remains the
@@ -186,15 +186,15 @@ export default function History() {
                 color: "white",
               }}
               date="December 30, 2005"
-              iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
+              iconStyle={{ background: "rgb(237,25,39,255)", color: "#fff" }}
               // icon={<SchoolIcon />}
             >
               <h3 className="vertical-timeline-element-title">
                 U.S. Lab Module Recognized as Newest U.S. National Laboratory
               </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                "Certification"
-              </h4>
+              {/* <h6 className="vertical-timeline-element-subtitle">
+                "Unknown location"
+              </h6> */}
               <p>
                 The US part of the ISS is designated as the nation's newest
                 national laboratory by Congress in order to maximize its
@@ -215,9 +215,9 @@ export default function History() {
               <h3 className="vertical-timeline-element-title">
                 European Lab Joins the ISS
               </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                "Bachelor Degree"
-              </h4>
+              {/* <h4 className="vertical-timeline-element-subtitle">
+                "Unknown"
+              </h4> */}
               <p>
                 The Columbus Laboratory of the European Space Agency is
                 integrated inside the station.
@@ -230,15 +230,15 @@ export default function History() {
                 color: "white",
               }}
               date="March 11, 2008"
-              iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
+              iconStyle={{ background: "rgb(237,25,39,255)", color: "#fff" }}
               // icon={<StarIcon />}
             >
               <h3 className="vertical-timeline-element-title">
                 Japanese Lab Joins the ISS
               </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                "Bachelor Degree"
-              </h4>
+              <h6 className="vertical-timeline-element-subtitle">
+                Kennedy Space Center, Florida
+              </h6>
               <p>
                 The first Japanese Kibo laboratory module is integrated into the
                 station.
@@ -270,7 +270,7 @@ export default function History() {
                 color: "white",
               }}
               date="February 2011"
-              iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
+              iconStyle={{ background: "rgb(237,25,39,255)", color: "#fff" }}
               // icon={<StarIcon />}
             >
               <h3 className="vertical-timeline-element-title">
@@ -307,7 +307,7 @@ export default function History() {
                 color: "white",
               }}
               date="September 30, 2013"
-              iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
+              iconStyle={{ background: "rgb(237,25,39,255)", color: "#fff" }}
               // icon={<StarIcon />}
             >
               <h3 className="vertical-timeline-element-title">
