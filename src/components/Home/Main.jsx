@@ -172,7 +172,7 @@ export default function Main() {
       "./models/earth/earthDraco.gltf",
       (gltf) => {
         // gltf.scene.scale.set(0.0033, 0.0033, 0.0033);
-        gltf.scene.scale.set(0.02, 0.02, 0.02);
+        gltf.scene.scale.set(0.0199, 0.0199, 0.0199);
         gltf.scene.rotateY(-4.7);
         earth.add(gltf.scene);
         scene.add(earth);
@@ -201,7 +201,7 @@ export default function Main() {
     const cloudMaterial = new THREE.MeshPhongMaterial({
       map: cloudTexture,
       transparent: true,
-      opacity: 0.8,
+      opacity: 0.9,
     });
     const cloudGeometry = new THREE.SphereGeometry(0.022, 32, 32);
     const cloudMesh = new THREE.Mesh(cloudGeometry, cloudMaterial);
@@ -209,10 +209,10 @@ export default function Main() {
     earth.add(cloudMesh);
 
     //Light
-    const ambientLight = new THREE.AmbientLight(0xffffff, 2.5);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 2);
     scene.add(ambientLight);
 
-    const pointLight = new THREE.PointLight(0xffffff, 2.5);
+    const pointLight = new THREE.PointLight(0xffffff, 2);
     pointLight.position.set(6, 6, 6);
     scene.add(pointLight);
 
