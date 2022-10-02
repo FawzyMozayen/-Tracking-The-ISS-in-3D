@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./quiz.css";
+import NavBar from "../NavBar/NavBar";
 
 
 const questions = [
@@ -118,6 +119,7 @@ class Quiz extends Component {
         
       }}
       >
+        <NavBar />
       <h1>
         Quiz Time (Not Done Yet)
       </h1>
