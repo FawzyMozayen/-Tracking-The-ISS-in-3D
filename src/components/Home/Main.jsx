@@ -43,6 +43,7 @@ export default function Main() {
     velocity: 0.0,
     daynum: 0,
   });
+
   const getIssLocationNow = useApi(issLocation.getIssLocationNow);
 
   const getIssLocation = async () => {

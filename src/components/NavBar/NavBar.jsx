@@ -31,7 +31,7 @@ export default function NavBar(props) {
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
-          width: "15%",
+          width: "19%",
           marginRight: "2em",
           marginTop: "0.5em",
         }}
@@ -86,7 +86,6 @@ export default function NavBar(props) {
             Quiz Me
           </a>
         </li>
-
       </ul>
     </div>
   );
