@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Spot() {
+export default function Spot(props) {
   return (
     <div
       style={{
@@ -14,7 +14,7 @@ export default function Spot() {
         marginTop: 15,
         padding: "3em",
         width: "60%",
-        height: "70%",
+        height: "73%",
         color: "#000",
         background: "rgba(255, 255, 255, 0.7)",
         borderRadius: ".8em",
@@ -22,6 +22,21 @@ export default function Spot() {
         lineHeight: 1.2,
       }}
     >
+      <h4
+        style={{
+          fontSize: 16,
+          fontWeight: 600,
+          marginBottom: 10,
+          position: "relative",
+          top: -8,
+          left: -10,
+          textAlign: "right",
+          cursor: "pointer",
+        }}
+        onClick={() => props.vis(false)}
+      >
+        Close
+      </h4>
       <div>
         <h1 style={{ textAlign: "center", marginBottom: "3%" }}>
           How do I Spot the Station?

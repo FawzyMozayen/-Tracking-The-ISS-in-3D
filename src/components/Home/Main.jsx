@@ -414,7 +414,7 @@ export default function Main() {
               How do I Spot The Station?
             </h4>
           </div>
-          {showSpot && <Spot />}
+          {showSpot && <Spot vis={setShowSpot} />}
           <Credit />
         </>
       )}
