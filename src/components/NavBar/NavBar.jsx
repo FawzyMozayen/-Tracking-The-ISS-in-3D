@@ -73,6 +73,20 @@ export default function NavBar(props) {
             About
           </a>
         </li>
+
+        <li>
+          <a
+            style={{
+              color: "white",
+              fontWeight: "bolder",
+              textDecoration: "underline",
+            }}
+            href="/quiz"
+          >
+            Quiz Me
+          </a>
+        </li>
+
       </ul>
     </div>
   );
