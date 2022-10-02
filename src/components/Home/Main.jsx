@@ -26,6 +26,7 @@ export default function Main() {
   const earth = new THREE.Group();
 
   const [showSpot, setShowSpot] = useState(false);
+  const [oldIssInfo, setOldIssInfo] = useState([]);
 
   const [userLocation, setUserLocation] = useState({
     lat: 0,
@@ -40,18 +41,22 @@ export default function Main() {
     longitude: 0.0,
     altitude: 0.0,
     velocity: 0.0,
+    daynum: 0,
   });
   const getIssLocationNow = useApi(issLocation.getIssLocationNow);
 
   const getIssLocation = async () => {
     const issLocation = await getIssLocationNow.request();
-    const { altitude, latitude, longitude, velocity } = issLocation?.data;
-    setIssInfo({ altitude, latitude, longitude, velocity });
+    const { altitude, latitude, longitude, velocity, daynum, visibility } =
+      issLocation?.data;
+    setIssInfo({ altitude, latitude, longitude, velocity, daynum, visibility });
+    setOldIssInfo((oldIssInfo) => [...oldIssInfo, issLocation?.data]);
     const pos = calcPosFromLatLonRad({
       lat: latitude,
       lon: longitude,
       radius: 1,
     });
+
     iss.position.set(pos.x, pos.y, pos.z);
   };
 
@@ -341,6 +346,38 @@ export default function Main() {
               ).toFixed(4) * 3.28084
               // to convert meters to feet divide by 0.3048 (1 meter = 3.28084 feet)
             } feet`}</span>
+            <br />
+            <br />
+            <p
+              style={{
+                color: "white",
+              }}
+            >
+              <strong>Days In Space:</strong>
+            </p>
+            <span
+              style={{
+                color: "white",
+              }}
+            >
+              {parseInt(issInfo.daynum)}
+            </span>
+            <br />
+            <br />
+            <p
+              style={{
+                color: "white",
+              }}
+            >
+              <strong>Visibility on the ISS:</strong>
+            </p>
+            <span
+              style={{
+                color: "white",
+              }}
+            >
+              {issInfo.visibility}
+            </span>
           </section>
 
           <div
