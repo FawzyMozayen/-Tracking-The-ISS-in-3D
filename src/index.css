@@ -48,6 +48,6 @@ a:hover {
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: rgb(233, 30, 99);
+    background: rgb(237,25,39,255);
     border-radius: 5px;
   }
